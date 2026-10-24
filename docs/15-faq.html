@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ · SLATE Teams Docs</title>
+<meta name="description" content="Won&#x27;t start, can&#x27;t connect, work won&#x27;t run, numbers don&#x27;t add up — twelve questions with answers that actually exist in the code">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/15-faq.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="15-faq" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/15-faq.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link active" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Data &amp; settings</span><span class="sep">/</span><span class="current">FAQ</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">FAQ</h1>
+<p>Every answer here traces back to a line of code. Anything we couldn't verify isn't in this list.</p>
+<h2 id="wont-start-wont-connect"><a class="anchor" href="#wont-start-wont-connect" aria-hidden="true">#</a>Won't start, won't connect</h2>
+<p><strong>Double-clicking does nothing, or the backend won't come up.</strong> If the first instance is still opening its window or is hiding in the tray, another launch calls it back and prints "already running". When it really fails, the port is usually taken: the app prefers 8130 and falls back to a free one, and remote control prefers 8131 and walks up twenty ports. Both use the port they <strong>actually</strong> got, so the address on screen is the truth and nothing else needs editing.</p>
+<p><strong>Which file holds the logs.</strong> The backend and the launch sequence write <code>desktop_backend.log</code>: at the repo root when running from source, next to the program folder on a Windows install, inside the data folder on a macOS install. Errors thrown by the page itself go to <code>data/js_errors.log</code>.</p>
+<p><strong>A phone opens the address and hits "authorization required", or it worked yesterday.</strong> The first case is an address without its auth code — copy it fresh from the host's settings or scan the QR code. The second is that the master auth code is generated anew for every process, so a restart retires the old link. Unauthenticated LAN access is refused on purpose.</p>
+<h2 id="the-interface"><a class="anchor" href="#the-interface" aria-hidden="true">#</a>The interface</h2>
+<p><strong>How do I switch the interface language?</strong> You don't switch inside the app: the language is chosen at install time and written to <code>data/language.txt</code>. Edit that to <code>en</code> or <code>zh</code>, or override it once with the <code>SLATE_LANG</code> environment variable, then restart.</p>
+<p><strong>The red-ink side is hard to read in dark mode.</strong> Alert red, done green and to-do amber are not driven by your accent colour: a light set and a dark set exist and the page picks one by background luminance, custom themes included. The ledger red is deliberately deep and dull on light and swaps to a brighter value on dark, so "darker means less visible" never happens.</p>
+<h2 id="office-and-debate-hall"><a class="anchor" href="#office-and-debate-hall" aria-hidden="true">#</a>Office and debate hall</h2>
+<p><strong>Why isn't an AI staff member's work running?</strong> The backend only queues; it executes nothing. The one on duty is the page that is open on that machine. Close every page and jobs stay in the queue; an expired lease returns a job to the queue, and the same job is claimed at most twice before it is declared failed. A phone page has no office, so a phone is never on duty.</p>
+<p><strong>Where does work go once it is judged "not worth doing"?</strong> Into "waiting on you", with the reason written on the line. It isn't a failure and the backend never revives it: there are exactly two exits — you put it back in the queue (raised above ordinary duty work, though triage can still outrank it), or you agree it shouldn't be done and it closes. An employee can't open that door.</p>
+<p><strong>The daily budget is full, so why did my own hand-off still schedule?</strong> The circuit breaker answers one question only: "may the duty roster queue <strong>new</strong> work". Already-queued jobs finish (cutting one half-way costs more and explains less), morning triage still runs — that is precisely the judgement of "what to do with the budget left" — and the button you pressed is your call to make.</p>
+<p><strong>Why did the note get worked again on the next pass?</strong> That "open item" note was never struck through. When he writes a new note, he has to name the one it closes. Each person keeps only the forty most recent notes; unlimited history would fill his own context first.</p>
+<p><strong>The participant's page says the ticket is no longer valid.</strong> Have the host issue a new one. Tickets can be revoked and the database stores only their hash, so a revoked link is dead for good — the original string can't be recovered from a backup either.</p>
+<h2 id="data"><a class="anchor" href="#data" aria-hidden="true">#</a>Data</h2>
+<p><strong>"Clear conversations" left my staff in place, and a restore reported 0 rows.</strong> Both are designed. The roster, the duty schedules and an employee's own notes count as <strong>configuration</strong>, not history. A 0-row restore means that backup never carried the block: the tables are now created before merging so a clean machine doesn't silently drop whole pieces of history, but exports made before those tables existed genuinely have nothing to give back — export again.</p>
+<p><strong>Is my key in the backup?</strong> Not in the backend half (the tables); <strong>yes</strong> in the local half, which is plaintext. Conversely, nothing under <code>data/</code> that is configuration or a binary is in there: shared desktop settings, MCP endpoints and their secrets, scheduled tasks, skills, expert packs, action playbooks, the global constitution, the knowledge base, background images and imported fonts. Move those yourself.</p>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<ul><li>Install methods and the port split: <a href="./02-install.html">Install &amp; launch</a>.</li><li>The full backup scope: <a href="./12-projects-data.html">Projects, backups and the ledger</a>.</li><li>Remote control and headless mode: <a href="./13-mobile.html">Phone remote control</a>.</li></ul></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./14-settings.html"><span class="dir">Previous</span><span class="ttl">Settings</span></a><span class="empty"></span></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#wont-start-wont-connect">Won&#x27;t start, won&#x27;t connect</a></li><li class="lv2"><a href="#the-interface">The interface</a></li><li class="lv2"><a href="#office-and-debate-hall">Office and debate hall</a></li><li class="lv2"><a href="#data">Data</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

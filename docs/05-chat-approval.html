@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chat &amp; approvals · SLATE Teams Docs</title>
+<meta name="description" content="What the chat page can do, the four real approval modes and what each lets through, the exact meaning of Night Mode, where the high-risk lists live, how tool calls render">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/05-chat-approval.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="05-chat-approval" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/05-chat-approval.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link active" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Daily</span><span class="sep">/</span><span class="current">Chat &amp; approvals</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Chat &amp; approvals</h1>
+<h2 id="what-the-chat-page-does"><a class="anchor" href="#what-the-chat-page-does" aria-hidden="true">#</a>What the chat page does</h2>
+<ul><li><strong>Sidebar</strong>, three tabs: Project (folder and file tree), Tasks (past conversations — searchable, batch manageable, archivable), Summary.</li><li><strong>Above the feed</strong>: manual context compaction, memory &amp; profile, expert packs, prompt snippets, task list, background tasks.</li><li><strong>Input toolbar, left</strong>: the "+" popover — Grind Mode, Brainstorm, Target Mode, Scheduled Tasks, plus Mentions (@ prefix) for skills / tools / MCP / files. Then response mode, approval mode, attachment, model, reasoning effort.</li><li><strong>Input toolbar, right</strong>: Polish prompt, Voice Input, Send. <code>Enter</code> sends, <code>Shift+Enter</code> breaks a line.</li></ul>
+<p>Four built-in response modes: Smart, Chat, Economy, Turbo. They differ in whether the tool catalog goes out, how many rounds they get and which prompt they append; custom modes live on the <a href="./11-extensions.html">Extensions</a> page.</p>
+<h2 id="approval-modes-four-of-them"><a class="anchor" href="#approval-modes-four-of-them" aria-hidden="true">#</a>Approval modes: four of them</h2>
+<p>The pill at the lower left of the input box is approval mode. There are <strong>four</strong>, changeable at any time, and the change applies to <strong>this conversation only</strong>:</p>
+<div class="table-wrap"><table><thead><tr><th>id</th><th>Label</th><th>Lets through</th><th>Stops</th></tr></thead><tbody><tr><td><code>ask</code></td><td>Manual Approval</td><td>Tools that never cross this gate, like local file reads and writes</td><td>Asks before <strong>every</strong> command and every network call</td></tr><tr><td><code>auto</code></td><td>Auto Approval</td><td>Commands and network calls matching no high-risk rule</td><td>Asks only when one does</td></tr><tr><td><code>full</code></td><td>Full Access</td><td>Never asks for commands or network</td><td>Still asks when a condition is missing; catastrophic commands stay hard-blocked</td></tr><tr><td><code>night</code></td><td>Night Mode</td><td>Commands, network and questions all go unanswered</td><td>Only catastrophic commands</td></tr></tbody></table></div>
+<p><code>ask</code> is the default for new conversations. Settings → Approval Mode changes that default; a conversation that has picked one stops following it.</p>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>Only five things cross this gate</span></div><div class="callout-body"><p>terminal running a command, bg_task starting a job (status / log / stop change nothing, so they don't count), web_search, web_fetch, browser_automation. Local file reads and writes never come here.</p></div></div>
+<h2 id="what-night-mode-actually-means"><a class="anchor" href="#what-night-mode-actually-means" aria-hidden="true">#</a>What Night Mode actually means</h2>
+<p>The <strong>unattended</strong> tier: the same pass-through rule as Full Access, plus the "ask one multiple-choice question when a condition is missing" path switched off too. No question pops — the model picks an option itself, writes the choice and its reason into its reply, and continues.</p>
+<p>It adds no new rule and opens no new door — the only difference is that nothing is waiting for a person. Pair it with "Keep the system awake while Night Mode tasks run" (Settings → Approval Mode, on by default).</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>Catastrophic commands are blocked in every mode</span></div><div class="callout-body"><p>The backend refuses these prefixes with no override, approval included: <code>rm -rf /</code>, <code>rm -rf ~</code>, <code>format c:</code>, <code>format d:</code>, <code>mkfs</code>, <code>dd if=</code>. Full Access is marked red (no safety net); Night Mode night purple (the night is handed over).</p></div></div>
+<h2 id="where-the-high-risk-lists-live"><a class="anchor" href="#where-the-high-risk-lists-live" aria-hidden="true">#</a>Where the high-risk lists live</h2>
+<p>One list, mirrored on both sides — change both or they drift:</p>
+<ul><li>Frontend: <code>HIGH_RISK_PATTERNS</code> in <code>frontend/js/services/riskguard.js</code>, plus one check for "downloaded and piped straight into a shell".</li><li>Backend: <code>HIGH_RISK_PATTERNS</code> in <code>backend/skills/terminal.py</code> (one more rule, the PowerShell <code>ri</code> alias) and <code>BLOCKED_PREFIXES</code>.</li></ul>
+<p>The rules are hard-coded: file and directory deletion, disk writes and partitioning, shutdown and reboot, privilege escalation, forced kills, the registry, services and accounts, file permissions, Git force-push / hard reset / clean / branch delete, database drops and truncates, global dependency removal. Each command is split on <code>&amp;&amp;</code>, <code>||</code>, <code>;</code> and <code>|</code> and checked segment by segment, so a rule buried in a chain cannot slip through.</p>
+<h2 id="what-the-approval-dialog-shows"><a class="anchor" href="#what-the-approval-dialog-shows" aria-hidden="true">#</a>What the approval dialog shows</h2>
+<p>Three titles: High-Risk Command Approval / Command Approval / Network Access Approval. It states the triggered rule or the current mode, prints the command or the access target, and for commands has the current model explain what the command does (turn that off under Settings → AI features). The button reads "Approve &amp; Run" or "Allow access".</p>
+<p>Under parallel runs several dialogs <strong>queue</strong> rather than quietly refusing each other, so nothing is rejected before you've seen it. A refusal goes back to the model verbatim, with an explicit instruction not to retry the same call.</p>
+<h2 id="how-tool-calls-render"><a class="anchor" href="#how-tool-calls-render" aria-hidden="true">#</a>How tool calls render</h2>
+<p>Each call is a card: tool icon, name, a one-line summary, and a status pill reading executed, applied, created, appended, diff preview, file preview, append preview, failed, or not run. Cards are <strong>collapsed by default</strong>; only a failed one opens on its own. Click for the arguments and output — for file edits that means the path and the edit count, never the whole diff. Images, videos and documents a tool produced get a preview inside the card, and several calls in one turn group under a heading reading "{n} calls", listing the first three tool names.</p>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<ul><li>To have AI keep working while you're away: <a href="./07-office.html">Office</a>.</li><li>How the context budget is computed: <a href="./04-models.html">Models &amp; usage</a>.</li></ul></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./04-models.html"><span class="dir">Previous</span><span class="ttl">Models &amp; usage</span></a><a class="next" href="./06-team.html"><span class="dir">Next</span><span class="ttl">Team · the debate hall</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#what-the-chat-page-does">What the chat page does</a></li><li class="lv2"><a href="#approval-modes-four-of-them">Approval modes: four of them</a></li><li class="lv2"><a href="#what-night-mode-actually-means">What Night Mode actually means</a></li><li class="lv2"><a href="#where-the-high-risk-lists-live">Where the high-risk lists live</a></li><li class="lv2"><a href="#what-the-approval-dialog-shows">What the approval dialog shows</a></li><li class="lv2"><a href="#how-tool-calls-render">How tool calls render</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

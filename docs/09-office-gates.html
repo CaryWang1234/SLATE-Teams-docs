@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Office · gates &amp; accounts · SLATE Teams Docs</title>
+<meta name="description" content="The review gate, the daily token budget, deadline escalation, and where the standup and record cards get their numbers">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/09-office-gates.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="09-office-gates" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/09-office-gates.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link active" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Office</span><span class="sep">/</span><span class="current">Office · gates &amp; accounts</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Office · gates &amp; accounts</h1>
+<p>Handing work to AI staff needs a few gates: deliveries shouldn't land on you unexamined, spend has to have a ceiling, and an expired deadline shouldn't rot on the desk. All four live in this layer, and every number is computed from <strong>the same jobs table</strong> — there is no second ledger.</p>
+<h2 id="the-review-gate"><a class="anchor" href="#the-review-gate" aria-hidden="true">#</a>The review gate</h2>
+<p>When you hire someone you pick "the reviewer" for them. Their deliveries go to that reviewer first and <strong>not straight to you</strong>.</p>
+<ul><li>Review is itself <strong>a job scheduled under the reviewer</strong>: it shouldn't sit behind ordinary duty work, so it queues slightly ahead — but anything triage raised above it still goes first. Its deadline defaults to two hours.</li><li>The reviewer closes it with "Judge This Delivery", and there are exactly two verdicts: <strong>approve</strong> (it passes, and this is the first time the delivery reaches you) or <strong>return</strong> (it fails, back to the author, with what to change written down).</li><li>The reviewer must exist in the roster, <strong>cannot review themselves</strong>, and cannot review for someone who has left the roster.</li></ul>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>The wording you see differs</span></div><div class="callout-body"><p>Before review passes you only get "An employee sent a delivery for review"; after it passes you get "Employee delivery". When it comes back the line reads "Returned in review: why". That split is deliberate — <strong>something that hasn't passed shouldn't look like a delivery</strong>.</p></div></div>
+<p>A returned job is re-done through the same <a href="./08-office-work.html">hand-off</a> channel, so it counts in "hop {n}" too and stops at hop 6.</p>
+<h2 id="daily-budget"><a class="anchor" href="#daily-budget" aria-hidden="true">#</a>Daily budget</h2>
+<p>Each employee can carry a <strong>Daily budget</strong> in tokens. Once today's spend reaches it:</p>
+<ul><li>the duty roster <strong>schedules no new work</strong>, and the job shows up as <strong>Blocked</strong> with the reason on the line;</li><li><strong>morning triage and your own "Run now" still schedule</strong>. Otherwise a full budget would lock you out of even asking them to finish the last item in hand.</li></ul>
+<p>The record column reads "{used today} / cap {budget}" and marks <strong>Budget spent</strong> once it's over.</p>
+<h2 id="expired-deadlines-escalate-to-a-human"><a class="anchor" href="#expired-deadlines-escalate-to-a-human" aria-hidden="true">#</a>Expired deadlines escalate to a human</h2>
+<p>If triage gave a job a deadline, the clock speaks for the human once it passes: a system line appears in the feed and the job moves into "Waiting on you". The same reminder fires <strong>once</strong> — refreshing doesn't nag you again — and each pass escalates only a handful of jobs, because flooding the feed is the same as not reminding anyone.</p>
+<h2 id="two-cards"><a class="anchor" href="#two-cards" aria-hidden="true">#</a>Two cards</h2>
+<p><strong>Today's standup</strong> — every shift that had "Morning triage" checked leaves one self-reported line: who, what they said, when. If nobody has reported it says so and tells you to put a triage shift on someone, rather than showing you an empty table.</p>
+<p><strong>Record</strong> — one row per employee: {n} done, {n} failed, {n} waiting on you, {n} awaiting review, {n} returned, how long a run takes on average, and how many tokens went today.</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>What "average" measures</span></div><div class="callout-body"><p>That column spans <strong>claim to close-out</strong>, not end-to-end wall clock — time spent waiting in the queue isn't counted. It's an order of magnitude, not a receipt.</p></div></div>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<p>How these jobs, messages and verdicts get into a backup: <a href="./12-projects-data.html">Projects &amp; data</a>.</p></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./08-office-work.html"><span class="dir">Previous</span><span class="ttl">Office · working like a person</span></a><a class="next" href="./10-board.html"><span class="dir">Next</span><span class="ttl">The board and workflows</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#the-review-gate">The review gate</a></li><li class="lv2"><a href="#daily-budget">Daily budget</a></li><li class="lv2"><a href="#expired-deadlines-escalate-to-a-human">Expired deadlines escalate to a human</a></li><li class="lv2"><a href="#two-cards">Two cards</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

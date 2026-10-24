@@ -56,7 +56,7 @@
   <div class="scrim" data-scrim hidden></div>
 
   <aside class="sidebar" data-sidebar aria-label="文档导航">
-    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">开始</div><ul class="nav-list"><li><a class="nav-link active" href="./01-what-is-teams.html">认识 SLATE Teams</a></li></ul></div></nav>
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">开始</div><ul class="nav-list"><li><a class="nav-link active" href="./01-what-is-teams.html">认识 SLATE Teams</a></li><li><a class="nav-link" href="./02-install.html">安装与启动</a></li><li><a class="nav-link" href="./03-interface.html">界面与页签</a></li></ul></div><div class="nav-group"><div class="nav-group-title">日常</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">模型与用量</a></li><li><a class="nav-link" href="./05-chat-approval.html">对话与审批</a></li></ul></div><div class="nav-group"><div class="nav-group-title">协作</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">团队 · 议事厅</a></li></ul></div><div class="nav-group"><div class="nav-group-title">办公室</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">办公室 · 招人、排班、交付</a></li><li><a class="nav-link" href="./08-office-work.html">办公室 · 像人一样工作</a></li><li><a class="nav-link" href="./09-office-gates.html">办公室 · 门禁与账</a></li></ul></div><div class="nav-group"><div class="nav-group-title">能力</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">黑板与工作流</a></li><li><a class="nav-link" href="./11-extensions.html">扩展</a></li></ul></div><div class="nav-group"><div class="nav-group-title">数据与设置</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">项目、备份与账本</a></li><li><a class="nav-link" href="./13-mobile.html">手机遥控</a></li><li><a class="nav-link" href="./14-settings.html">设置</a></li><li><a class="nav-link" href="./15-faq.html">常见问题</a></li></ul></div></nav>
   </aside>
 
   <main class="main" id="main">
@@ -69,7 +69,7 @@
 <div class="table-wrap"><table><thead><tr><th>位置</th><th>它管什么</th><th>去这几章</th></tr></thead><tbody><tr><td>议事厅</td><td>真人席位与 AI 席位同开一场讨论，主持人推进轮次，结论要人拍板</td><td><a href="./06-team.html">团队</a></td></tr><tr><td>办公室</td><td>AI 员工按值班表自己找活干，交付要过审校，账算在每个人头上</td><td><a href="./07-office.html">办公室</a></td></tr><tr><td>账本</td><td>谁说的、谁批的、花了多少 token，全部落库可查可备份</td><td><a href="./12-projects-data.html">项目与数据</a></td></tr></tbody></table></div>
 <div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>一句话区分</span></div><div class="callout-body"><p>议事厅是<strong>同一时刻</strong>的协同——大家在一场讨论里；办公室是<strong>不同时刻</strong>的协同—— 你把活留下，AI 员工在它值班时做完，你回来验收。</p></div></div>
 <h2 id="六个顶层页签"><a class="anchor" href="#六个顶层页签" aria-hidden="true">#</a>六个顶层页签</h2>
-<ul><li><strong>对话</strong> —— 常规的一对一会话，工具调用、审批、上下文预算都在这里。</li><li><strong>团队</strong> —— 议事厅。席位栏、议事流、待你签字三栏并排。</li><li><strong>办公室</strong> —— AI 员工名册、值班表、工位递话、交付队列。</li><li><strong>黑板</strong> —— 把讨论摊成逻辑链与工作流节点，看图推进。</li><li><strong>扩展</strong> —— 技能、MCP 服务、内置工具、回复模式、专家，能力都在这里开关。</li><li><strong>设置</strong> —— 模型、主题、语言、数据与隐私、AI 辅助功能逐项开关。</li></ul>
+<ul><li><strong>对话</strong> —— 常规的一对一会话，工具调用、审批、上下文预算都在这里。</li><li><strong>团队</strong> —— 议事厅。席位栏、议事流、待你签字三栏并排。</li><li><strong>办公室</strong> —— AI 员工名册、值班表、工位递话、交付队列。</li><li><strong>黑板</strong> —— 把讨论摊成逻辑链与工作流节点，看图推进。</li><li><strong>扩展</strong> —— 七栏能力：技能、工具、回复模式、新功能、MCP、专家包、Actions。模型能用什么，在这页定。</li><li><strong>设置</strong> —— 模型、主题、语言、数据与隐私、AI 辅助功能逐项开关。</li></ul>
 <h2 id="与-slate-的关系"><a class="anchor" href="#与-slate-的关系" aria-hidden="true">#</a>与 SLATE 的关系</h2>
 <p>SLATE Teams 是 <a href="https://slate-ai.site/" target="_blank" rel="noopener">SLATE</a> 的同源分支，共用底座（对话、工具、技能、黑板、数据层）， 差别在<strong>协作层</strong>：多人席位、票据与作用域收窄、AI 员工与值班表。</p>
 <p>两者可以在同一台机器上并存：端口、数据目录、安装器身份与更新源都是分开的， 互相不覆盖，也不共用一份配置。</p>
@@ -79,7 +79,7 @@
 <p>怎么备份、怎么清、哪两种「清空」不是一回事，写在 <a href="./12-projects-data.html">项目与数据</a>。</p>
 <h2 id="下一步"><a class="anchor" href="#下一步" aria-hidden="true">#</a>下一步</h2>
 <ol><li><a href="./02-install.html">安装与启动</a> —— 装好、配一个模型、开第一桌。</li><li><a href="./03-interface.html">界面与页签</a> —— 六张页签各装什么，明暗两套主题。</li><li><a href="./07-office.html">办公室与 AI 员工</a> —— 这一版最不一样的地方。</li></ol></article>
-      <nav class="pager" aria-label="翻页"><span class="empty"></span><span class="empty"></span></nav>
+      <nav class="pager" aria-label="翻页"><span class="empty"></span><a class="next" href="./02-install.html"><span class="dir">下一篇</span><span class="ttl">安装与启动</span></a></nav>
       <footer class="site-footer">
         <span>SLATE Teams（席）· 一桌人带着 AI 一起干活</span>
         <span>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>设置 · SLATE Teams 文档</title>
+<meta name="description" content="设置页左栏 21 组分别管什么，重点讲模型与上下文、自定义主题、AI 辅助功能">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+<link rel="alternate" hreflang="en" href="../14-settings.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="../assets/docs.css">
+</head>
+<body data-page="14-settings" data-lang="zh" data-root="../" data-search-empty="没找到匹配的页面" data-search-docs="文档">
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="打开导航" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="../index.html">
+      <span class="brand-mark"><img src="../assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">文档</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>搜索文档</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a>
+      <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="../14-settings.html" hreflang="en" title="阅读英文版">English</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="文档导航">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">开始</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">认识 SLATE Teams</a></li><li><a class="nav-link" href="./02-install.html">安装与启动</a></li><li><a class="nav-link" href="./03-interface.html">界面与页签</a></li></ul></div><div class="nav-group"><div class="nav-group-title">日常</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">模型与用量</a></li><li><a class="nav-link" href="./05-chat-approval.html">对话与审批</a></li></ul></div><div class="nav-group"><div class="nav-group-title">协作</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">团队 · 议事厅</a></li></ul></div><div class="nav-group"><div class="nav-group-title">办公室</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">办公室 · 招人、排班、交付</a></li><li><a class="nav-link" href="./08-office-work.html">办公室 · 像人一样工作</a></li><li><a class="nav-link" href="./09-office-gates.html">办公室 · 门禁与账</a></li></ul></div><div class="nav-group"><div class="nav-group-title">能力</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">黑板与工作流</a></li><li><a class="nav-link" href="./11-extensions.html">扩展</a></li></ul></div><div class="nav-group"><div class="nav-group-title">数据与设置</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">项目、备份与账本</a></li><li><a class="nav-link" href="./13-mobile.html">手机遥控</a></li><li><a class="nav-link active" href="./14-settings.html">设置</a></li><li><a class="nav-link" href="./15-faq.html">常见问题</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="面包屑"><a href="../index.html">文档</a><span class="sep">/</span><span>数据与设置</span><span class="sep">/</span><span class="current">设置</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">设置</h1>
+<p>设置是顶栏第六个页签。左栏一份锚点导航、上方一个搜索框，右栏是分组区块； <strong>导航条目由页面现读区块生成</strong>，所以组数随版本变，但顺序与主区始终一致。当前共 <strong>21 组</strong>：</p>
+<p>模型配置 · API 测试 · 用量统计 · 上下文与项目 · 自动推进 · AI 辅助功能 · 通知 · 后台任务 · 多任务与项目 · 通用 UI（实验性）· 自定义主题 · 联网搜索 · 图片生成 · 视频生成 · 审批模式 · 数据备份与恢复 · 会话归档 · 存储空间 · 局域网遥控 · 打字小游戏 · 关于。</p>
+<p>改完点右上角<strong>保存</strong>统一落盘。界面语言<strong>不在这里</strong>：它在安装时选定（写入 <code>data/language.txt</code>）， 应用内不切换，优先级是环境变量 <code>SLATE_LANG</code> &gt; 该文件 &gt; 默认中文。</p>
+<h2 id="模型与上下文"><a class="anchor" href="#模型与上下文" aria-hidden="true">#</a>模型与上下文</h2>
+<p><strong>模型配置</strong>里两件事：自定义模型（名称/ID、请求模式 OpenAI 兼容 / Anthropic / curl 直连、 Base URL、API Key、Context Window）和内置模型密钥。下面还有一条可选的 Responses API 开关。 <strong>API 测试</strong>用一条最短请求打一次真实链路——它走的就是对话那条路，不是另造一条。</p>
+<p><strong>上下文与项目</strong>这组决定模型一次能看到多少：</p>
+<ul><li>上下文 Token 上限：内置模型与已填窗口的模型走「自动」，各取标称窗口的八成； 这一档只给完全没有窗口信息的模型兜底。要单独调某只模型，用模型配置里那一行的「最大上下文」—— 滑杆粗选、旁边的数字框可填精确值、本地与自定义端点还能<strong>探测窗口</strong>。压缩阈值与上下文条按同一个数算。</li><li>单次输出上限（1024–65536）；默认勾上「输出文件时把长度上限提升到 65536，避免大文件被截断」。</li><li>默认勾上「自动确认文件创建与修改」；关掉后恢复成写文件前先预览、点接受。</li><li><strong>项目宪法</strong>：这一项目里长期有效的硬规则。同组还有提示词工厂的入口。</li></ul>
+<h2 id="自定义主题"><a class="anchor" href="#自定义主题" aria-hidden="true">#</a>自定义主题</h2>
+<p>启用自定义主题后，配色<strong>只填四个源色</strong>（页面底色、面板底色、正文、强调），其余色值由它们按亮度 与对比度算出来——正文与三个次要层级都会被拉到能读的清。预设色板有 <strong>10 档</strong>： 簿纸、墨夜、雾蓝、深海、松墨、苔绿、陶土、暮紫、石墨、铅字。点一个预设就把整套源色填进色板， 之后仍可逐格改；<strong>改过之后这一份就不再属于任何预设</strong>。</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>开启期间明暗切换被锁</span></div><div class="callout-body"><p>自定义主题开启时，顶栏的明暗按钮与 Ctrl+D 不生效，点它会说明原因。关闭自定义主题，整套回到内置主题。</p></div></div>
+<ul><li><strong>字体</strong>：系统已装的字体族按名字直接用；「导入字体」只收单个 <code>.woff2 / .woff / .ttf / .otf</code> （16MB 以内），文件<strong>只落在本机 <code>data/theme/fonts/</code></strong>——不进对话记录、不进仓库、不进安装包， 也不会跟着备份到另一台机器。只导入一个字重时，粗体与斜体由浏览器模拟。</li><li><strong>板块透明度</strong>（55%–100%）是面板、卡片、输入框与助手气泡那一层底色的<strong>平面不透明度</strong>， 调低透出的是页面底色或背景图，<strong>不是毛玻璃模糊</strong>；用户自己的气泡与代码块始终实色。</li><li><strong>背景图</strong>存在本机 <code>data/theme/</code>，配一条遮罩浓度（40%–95%）：过低会让正文压在图上，过高等于没铺图。 Wallpaper Engine 那栏只读取它自己目录里的配置与 preview 图，取来当背景图——不启动它、也不改它的设置。</li></ul>
+<h2 id="ai-辅助功能"><a class="anchor" href="#ai-辅助功能" aria-hidden="true">#</a>AI 辅助功能</h2>
+<p>除对话、团队讨论、提示词工厂外，所有会<strong>自行调用模型</strong>的功能都在这一组：共 <strong>15 项</strong>， 逐项开关，其中 <strong>12 项</strong>还能各选一只模型。剩下三项不带模型栏，因为模型另有归属： 定时与事件任务的模型<strong>在每个任务里各自选</strong>，图片生成与视频生成的模型与 Key 在各自区块配置。 <strong>关掉一项，就不再为它发任何请求。</strong></p>
+<p>覆盖的是：上下文压缩摘要、记忆自动蒸馏、记忆手动提取、对话洞察捕获、自动会话标题、 代码理解文档、代码审查、黑板 AI 整理、提示词优化、子代理并行、高危命令目的说明、团队工作流执行。</p>
+<p>「自动推进」的审阅模型和「后台任务」的自动续跑在各自区块里设，这里不重复列。</p>
+<h2 id="能力为什么不在这里管"><a class="anchor" href="#能力为什么不在这里管" aria-hidden="true">#</a>能力为什么不在这里管</h2>
+<p>工具、技能、回复模式、专家包、MCP、Actions 全部在<a href="./11-extensions.html">扩展</a>页——那里是能力清单的 <strong>唯一一处真相</strong>。设置页只留两类东西：能力的<strong>供应商配置</strong>（联网搜索引擎与渲染方式、图片/视频生成的 模型与 Key）和能力的<strong>调用闸门</strong>（上面那 15 项开关）。同一件事在两处各管一半，不会各说各话。</p>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>审批模式在这里，回复模式不在</span></div><div class="callout-body"><p>这组里定的是新对话的默认<strong>审批模式</strong>（手动 / 自动 / 完全访问 / 夜间）； <strong>回复模式</strong>是<a href="./11-extensions.html">另一回事</a>，在输入框上方按场挑。</p></div></div>
+<h2 id="数据与设备"><a class="anchor" href="#数据与设备" aria-hidden="true">#</a>数据与设备</h2>
+<p><strong>数据备份与恢复</strong>导出单个 JSON（对话、议事与账本、员工名册与值班表、记忆、素材、设置）， 恢复按 id 合并、不覆盖已有数据；细目见<a href="./12-projects-data.html">项目与数据</a>。 <strong>会话归档</strong>放从「任务」栏归档的会话，可恢复可彻底删除。<strong>存储空间</strong>可压缩数据库、清缓存。 <strong>局域网遥控</strong>开一个本机地址给手机或平板，用法见<a href="./13-mobile.html">移动端</a>。</p></article>
+      <nav class="pager" aria-label="翻页"><a class="prev" href="./13-mobile.html"><span class="dir">上一篇</span><span class="ttl">手机遥控</span></a><a class="next" href="./15-faq.html"><span class="dir">下一篇</span><span class="ttl">常见问题</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams（席）· 一桌人带着 AI 一起干活</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a> ·
+          <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · 文档随产品演进</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="本页目录"><div class="toc-title">本页目录</div><ul class="toc-list"><li class="lv2"><a href="#模型与上下文">模型与上下文</a></li><li class="lv2"><a href="#自定义主题">自定义主题</a></li><li class="lv2"><a href="#ai-辅助功能">AI 辅助功能</a></li><li class="lv2"><a href="#能力为什么不在这里管">能力为什么不在这里管</a></li><li class="lv2"><a href="#数据与设备">数据与设备</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文档">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="输入关键词，回车看结果" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
+  </div>
+</div>
+
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>

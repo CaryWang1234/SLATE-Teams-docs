@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interface &amp; tabs · SLATE Teams Docs</title>
+<meta name="description" content="What each of the six tabs holds, the three columns of the team page, light/dark plus the ten theme presets, language and the Prompt Factory entry">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/03-interface.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="03-interface" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/03-interface.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link active" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Start</span><span class="sep">/</span><span class="current">Interface &amp; tabs</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Interface &amp; tabs</h1>
+<p>One topbar over one workspace. Six tabs sit in the middle of the topbar; four buttons on the right: <strong>Keys</strong>, <strong>Remote</strong>, <strong>Theme</strong>, <strong>Settings</strong>.</p>
+<h2 id="the-six-tabs"><a class="anchor" href="#the-six-tabs" aria-hidden="true">#</a>The six tabs</h2>
+<div class="table-wrap"><table><thead><tr><th>Tab</th><th>What it holds</th><th>Read</th></tr></thead><tbody><tr><td>Chat</td><td>The ordinary one-to-one conversation: sidebar, message feed, usage strip, input toolbar</td><td><a href="./05-chat-approval.html">Chat &amp; approvals</a></td></tr><tr><td>Team</td><td>The debate hall: seats present, the feed, awaiting your signature</td><td><a href="./06-team.html">Team</a></td></tr><tr><td>Office</td><td>AI staff roster, the virtual office, the hand-off composer, and five tabs on the right: Activity / Waiting on you / Duties / Role / Standup &amp; Record</td><td><a href="./07-office.html">Office</a></td></tr><tr><td>Whiteboard</td><td>Cards as a reasoning chain plus a freehand layer; five views: Git / Flow / Kanban / Outline / Workflow</td><td><a href="./10-board.html">Whiteboard</a></td></tr><tr><td>Extensions</td><td>The master switch for everything the model may use, in seven sections: skills (SKILL.md), tools, modes, new features, MCP servers, expert packs, Actions</td><td><a href="./11-extensions.html">Extensions</a></td></tr><tr><td>Settings</td><td>Models and keys, context and project, approval mode, theme, notifications, backup and storage, one block after another</td><td><a href="./14-settings.html">Settings</a></td></tr></tbody></table></div>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>The chat sidebar is not a seventh tab</span></div><div class="callout-body"><p>"Project / Tasks / Summary" is a column <strong>inside</strong> the chat page; switching them never leaves the conversation. The right rail stacks the task list, background tasks and the Grind panel, each opening and closing on its own.</p></div></div>
+<h2 id="the-three-columns-of-the-team-page"><a class="anchor" href="#the-three-columns-of-the-team-page" aria-hidden="true">#</a>The three columns of the team page</h2>
+<p>Three columns, one per question a meeting table asks:</p>
+<ul><li><strong>Left · Present</strong> — who is at the table (AI seats and <a href="./06-team.html">human seats</a>), then "Team preset" and "Team history". History lives here too because both answer the same thing: how this session was assembled.</li><li><strong>Middle · The feed</strong> — the topic field, the max round count, this session's usage strip, and two views underneath: Team discussion / Workflow.</li><li><strong>Right · Awaiting You</strong> — the host-only actions: the "Decisions need my sign-off" switch and the items waiting on you.</li></ul>
+<h2 id="theme"><a class="anchor" href="#theme" aria-hidden="true">#</a>Theme</h2>
+<p>Two built-in themes: <strong>light</strong> and <strong>dark</strong>. The "Theme" button in the topbar switches them; the shortcut is <code>Ctrl+D</code> (<code>⌘D</code> on macOS).</p>
+<p>Below that sits the <strong>custom theme</strong> (Settings → Custom theme): you fill only four source colors — page background, panel background, body text, accent — and the other thirty-odd tokens are derived from them by luminance and contrast, so every text level stays readable. The same block handles panel opacity, imported font files and a background image (or whatever Wallpaper Engine is currently showing).</p>
+<div class="callout callout-tip"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 13.4V9M10 6.6v.6"/><path d="M7.6 12.4h4.8"/></svg><span>There are ten presets</span></div><div class="callout-body"><p>The preset row offers <strong>ten</strong> complete source sets: Ledger paper, Ink night, Mist blue, Deep sea, Pine ink, Moss, Clay, Dusk plum, Graphite, Letterpress. Clicking one fills the palette below; you can still edit each swatch — and once you do, it no longer belongs to any preset.</p></div></div>
+<p>While a custom theme is on, light/dark is locked: the topbar button and <code>Ctrl+D</code> do nothing, and clicking the button says why. Turning the custom theme off removes the whole injected stylesheet, down to the pixel.</p>
+<h2 id="interface-language"><a class="anchor" href="#interface-language" aria-hidden="true">#</a>Interface language</h2>
+<p><strong>There is no language switch inside the app.</strong> The language is chosen at install time; the installer writes it to <code>data/language.txt</code> (<code>zh</code> or <code>en</code>) and the runtime only reads it.</p>
+<p>To change it: edit <code>data/language.txt</code>, or start with the <code>SLATE_LANG</code> environment variable (higher priority), then restart.</p>
+<p>Translation covers interface text only — including button tooltips and input placeholders. Model output, your own input and code blocks are never translated.</p>
+<h2 id="prompt-factory"><a class="anchor" href="#prompt-factory" aria-hidden="true">#</a>Prompt Factory</h2>
+<p>It no longer owns a tab. The entry is the <strong>Open Workbench</strong> button under <strong>Settings → Context &amp; Project</strong>.</p>
+<p>The factory folds the constitution summary, context snippets, task description, constraints and deliverable requirements into one prompt you can actually hand over. Closing it only hides the form: your draft, the files you ticked and the generated result are all still there when you reopen it.</p>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<ol><li><a href="./04-models.html">Models &amp; usage</a> — add one model, read the usage strip.</li><li><a href="./05-chat-approval.html">Chat &amp; approvals</a> — how many approval modes there really are, and what each blocks.</li></ol></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./02-install.html"><span class="dir">Previous</span><span class="ttl">Install &amp; launch</span></a><a class="next" href="./04-models.html"><span class="dir">Next</span><span class="ttl">Models &amp; usage</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#the-six-tabs">The six tabs</a></li><li class="lv2"><a href="#the-three-columns-of-the-team-page">The three columns of the team page</a></li><li class="lv2"><a href="#theme">Theme</a></li><li class="lv2"><a href="#interface-language">Interface language</a></li><li class="lv2"><a href="#prompt-factory">Prompt Factory</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

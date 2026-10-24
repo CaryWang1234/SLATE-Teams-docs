@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Models &amp; usage · SLATE Teams Docs</title>
+<meta name="description" content="Where the model registry lives and which vendor prefixes to know, where keys are stored and whether backups carry them, how the context budget is computed and how to read the usage strip">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/04-models.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="04-models" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/04-models.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link active" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Daily</span><span class="sep">/</span><span class="current">Models &amp; usage</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Models &amp; usage</h1>
+<h2 id="where-models-come-from"><a class="anchor" href="#where-models-come-from" aria-hidden="true">#</a>Where models come from</h2>
+<p>The built-in list lives in the backend registry (<code>backend/routers/proxy.py</code>). The frontend fetches it at startup, in three groups: <strong>International models</strong>, <strong>Chinese Models</strong>, <strong>Local models</strong>.</p>
+<p>Recognising a vendor by its id prefix is enough: <code>gpt-</code>, <code>claude-</code>, <code>gemini-</code>, <code>deepseek-</code>, <code>kimi-</code>, <code>qwen-</code>, <code>glm-</code>, <code>doubao-</code>, <code>MiniMax-</code>, <code>ernie-</code>; the local entry is simply id <code>local</code> (Ollama / LM Studio). Each vendor's request URL and declared context window are written in the registry — you never fill them.</p>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>Reasoning levels differ per vendor</span></div><div class="callout-body"><p>Some can be switched off, some force thinking (Kimi K3 and GLM-5.3 have no "off"), some only offer a bare toggle. The "Reasoning effort" control therefore shows a different set of stops per model.</p></div></div>
+<h2 id="where-keys-are-stored"><a class="anchor" href="#where-keys-are-stored" aria-hidden="true">#</a>Where keys are stored</h2>
+<p>Settings → Model Config → "Built-in Model Keys", one key per vendor; the <strong>Keys</strong> button in the topbar opens Settings directly. When you send, the local backend takes the key and authenticates against that vendor. Keys land in <code>data/desktop_state.json</code> under <code>modelKeys</code>, with a copy in the browser's local state. The LAN remote reads that same file, so configuring it once covers the phone too.</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>Backups <strong>do</strong> contain your keys</span></div><div class="callout-body"><p>Settings says it plainly: a backup is "a single JSON file containing the backend database and local settings". Local settings include <code>modelKeys</code>. <strong>Treat the backup file as a secret</strong> — no group chats, no public cloud drive, never commit it to a repository.</p></div></div>
+<h2 id="the-context-budget"><a class="anchor" href="#the-context-budget" aria-hidden="true">#</a>The context budget</h2>
+<p>The denominator of that percentage is not the model's declared window — it is <strong>this session's budget</strong>:</p>
+<ul><li><strong>"Auto"</strong> (the default) = the model's declared window × <strong>0.8</strong>, floored, <strong>not snapped to a slider stop</strong>.</li><li>Only models with no window information at all fall back to the global "Context Token Limit" (64000 by default).</li><li>A value you set by hand wins, but never above that model's declared window.</li></ul>
+<p>The 20% is for output. Snapping to whole stops would flatten 128K / 200K / 256K into one number, and a small-window model can't reach the lowest stop at all — it would return 0 and occupy the full window with no room left to answer.</p>
+<p>The same budget feeds two places: where the context bar counts as full, and which round auto-compaction fires on. One number, so "it compacted while still under the limit" cannot happen.</p>
+<p>To tune one model: "Max context" on its row in Model Config — the slider rough-selects, the number box takes an exact value, and local or custom endpoints can "Probe window" to ask the endpoint itself. When budget and declared window disagree, the usage strip's hover shows both numbers.</p>
+<h2 id="how-to-read-the-usage-strip"><a class="anchor" href="#how-to-read-the-usage-strip" aria-hidden="true">#</a>How to read the usage strip</h2>
+<p>The strip above the conversation, left to right:</p>
+<div class="table-wrap"><table><thead><tr><th>Segment</th><th>What it is</th></tr></thead><tbody><tr><td>Model name</td><td>The current model; a warning mark appears beside it when no key is set</td></tr><tr><td>Messages</td><td>Message count for this conversation</td></tr><tr><td>In</td><td>Cumulative prompt tokens</td></tr><tr><td>Out</td><td>Cumulative completion tokens</td></tr><tr><td>Total</td><td>The two summed</td></tr><tr><td>Context</td><td>Tokens in use, plus a progress bar for the share of budget</td></tr></tbody></table></div>
+<p>The Context segment is clickable and jumps to that model's budget slider in Settings. Hovering the strip expands <strong>Context Breakdown</strong> into five buckets: System Prompt / Tool Catalog / Skill Injection / Tool Calls &amp; Results / Messages, each with its share.</p>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>These are estimates</span></div><div class="callout-body"><p>Tokens are estimated at roughly 3 characters per token. Trust the share and the trend, not a line-by-line match with your upstream bill.</p></div></div>
+<h2 id="switching-models-and-adding-a-vendor"><a class="anchor" href="#switching-models-and-adding-a-vendor" aria-hidden="true">#</a>Switching models and adding a vendor</h2>
+<ul><li><strong>Switch model</strong>: the model dropdown in the chat input toolbar. It is one global setting — changing conversation does not change the model, though each conversation keeps its own usage counters.</li><li><strong>Add a vendor</strong>: Settings → Model Config → "+ Add Model". Three request modes: OpenAI-compatible (appends <code>/chat/completions</code> itself), Anthropic (<code>/v1/messages</code> + <code>x-api-key</code>), or raw curl (Base URL is the full endpoint). Then fill Base URL, API Key (optional) and Context Window.</li><li><strong>Backup &amp; restore</strong>: Settings → Data Backup &amp; Restore merges by id and does not overwrite existing data. Details in <a href="./12-projects-data.html">Projects &amp; data</a>.</li></ul></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./03-interface.html"><span class="dir">Previous</span><span class="ttl">Interface &amp; tabs</span></a><a class="next" href="./05-chat-approval.html"><span class="dir">Next</span><span class="ttl">Chat &amp; approvals</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#where-models-come-from">Where models come from</a></li><li class="lv2"><a href="#where-keys-are-stored">Where keys are stored</a></li><li class="lv2"><a href="#the-context-budget">The context budget</a></li><li class="lv2"><a href="#how-to-read-the-usage-strip">How to read the usage strip</a></li><li class="lv2"><a href="#switching-models-and-adding-a-vendor">Switching models and adding a vendor</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

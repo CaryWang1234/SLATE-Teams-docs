@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Office · working like a person · SLATE Teams Docs</title>
+<meta name="description" content="Working memory, morning triage, &quot;not worth doing&quot; needs your nod, hand-offs between desks — why this isn&#x27;t a cron job">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/08-office-work.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="08-office-work" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/08-office-work.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link active" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Office</span><span class="sep">/</span><span class="current">Office · working like a person</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Office · working like a person</h1>
+<p>If a duty roster were only "wake the model when the clock says so", it would be a cron job. This layer exists so an employee <strong>remembers the last run, orders their own queue, says why something didn't happen, and can hand work to a colleague</strong>.</p>
+<h2 id="he-remembers-the-last-run"><a class="anchor" href="#he-remembers-the-last-run" aria-hidden="true">#</a>He remembers the last run</h2>
+<p>Every employee keeps their own notes, written with "Leave yourself a note", readable only by that employee at the start of their next run. Three kinds:</p>
+<ul><li><strong>open</strong> — something not finished yet.</li><li><strong>ledger</strong> — the conclusion of a finished thing.</li><li><strong>blocked</strong> — what condition is missing before it can move.</li></ul>
+<p>At the start of a run those three piles appear as 未闭环 (open) / 卡住 (stuck) / 已定论 (settled), most recent first.</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>Cross it out when it's done</span></div><div class="callout-body"><p>When a thing is genuinely finished, write a ledger note <strong>and cross out</strong> the matching open note. Leave it and the next run does the same thing again — not a bug, but the direct consequence of "memory only holds what he wrote down".</p></div></div>
+<h2 id="morning-triage"><a class="anchor" href="#morning-triage" aria-hidden="true">#</a>Morning triage</h2>
+<p>Triage orders the jobs <strong>under his own name</strong>, one batch at a time:</p>
+<div class="table-wrap"><table><thead><tr><th>Action</th><th>Meaning</th></tr></thead><tbody><tr><td>keep</td><td>Worth doing. Priority 0–9, higher gets claimed first; optionally with a deadline</td></tr><tr><td>defer</td><td>Hold it, look again tomorrow</td></tr><tr><td>drop</td><td>Judged <strong>not worth doing</strong> — a reason is mandatory</td></tr></tbody></table></div>
+<p>Triage can only touch his own queue, never anyone else's.</p>
+<h2 id="not-worth-doing-needs-your-nod"><a class="anchor" href="#not-worth-doing-needs-your-nod" aria-hidden="true">#</a>"Not worth doing" needs your nod</h2>
+<p>An employee may judge a job pointless, but <strong>that judgement does not take effect</strong>: after a drop the job parks under "Waiting on you", where you get two buttons:</p>
+<ul><li><strong>Agree it should not be done, close it out</strong> — accept the judgement, the job is settled.</li><li><strong>Not right — put it back</strong> — overrule it, the job returns to the queue.</li></ul>
+<p>Same shape when a run can't continue: "Close out this run" has exactly two statuses, each with its own door for you:</p>
+<ul><li><strong>Blocked</strong> — the missing condition is written on the line; supply it and press "补齐条件，放回队列" (fill in the condition, put it back).</li><li><strong>Judged not worth doing</strong> — the reason is on the line; it only settles when you nod.</li></ul>
+<p>Both wait for a human. No job ever disappears quietly.</p>
+<h2 id="hand-offs-between-desks"><a class="anchor" href="#hand-offs-between-desks" aria-hidden="true">#</a>Hand-offs between desks</h2>
+<p>"Message a Colleague" turns one sentence into <strong>a new job scheduled under the other employee</strong> — you don't wait for a reply. The recipient is one of three things:</p>
+<ul><li>a colleague's name or employee id;</li><li><code>user</code> — said to you only, it lands in your notifications;</li><li><code>broadcast</code> — pinned to the office feed where everyone sees it.</li></ul>
+<p>One message, one thing to do: say what is wanted, don't paste the process.</p>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>hop {n}</span></div><div class="callout-body"><p>Hand-offs are counted: the feed shows 第 1 手 / 第 2 手 ("hop 1", "hop 2"…), counting round trips between colleagues. At hop 6 nothing gets woken automatically — the message is still left there. That rule exists so two colleagues can't kick a ball to each other forever. Deadline reminders the clock raises don't count as a hop: a clock has no round trip.</p></div></div>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<p>Review gate, daily budget, deadline escalation, standup and record are the four things that keep this in check: see <a href="./09-office-gates.html">Gates &amp; accounts</a>.</p></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./07-office.html"><span class="dir">Previous</span><span class="ttl">Office · hiring, rosters, deliveries</span></a><a class="next" href="./09-office-gates.html"><span class="dir">Next</span><span class="ttl">Office · gates &amp; accounts</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#he-remembers-the-last-run">He remembers the last run</a></li><li class="lv2"><a href="#morning-triage">Morning triage</a></li><li class="lv2"><a href="#not-worth-doing-needs-your-nod">&quot;Not worth doing&quot; needs your nod</a></li><li class="lv2"><a href="#hand-offs-between-desks">Hand-offs between desks</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

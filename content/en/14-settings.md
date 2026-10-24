@@ -25,8 +25,9 @@ minimal request down the real chain — the same one a conversation uses, not a 
 "auto", each taking eighty percent of its nominal window, so the global cap here is only a backstop for models with no
 window information; to tune one model, use the "max context" control on its row in Models — the slider is a rough pick,
 the number box beside it takes an exact value, and local or custom endpoints can **probe the window**. The compression
-threshold and the context meter compute from that same number. Then: a single-output cap of 1024–65536, with "raise it to
-65536 when writing a file" on by default so large files aren't truncated; "auto-confirm file creation and modification"
+threshold and the context meter compute from that same number. Then: a single-output cap of 1024–65536, with
+"Raises the output length limit to 65536 when writing files so large files are not truncated" on by default;
+"auto-confirm file creation and modification"
 on by default, and off it returns to preview-then-accept for every write; and the **project constitution** — standing
 hard rules for this project, with the prompt factory entry point in the same group.
 

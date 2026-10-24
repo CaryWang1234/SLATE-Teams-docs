@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>安装与启动 · SLATE Teams 文档</title>
+<meta name="description" content="Windows / macOS / 源码三种装法，第一次配模型，与 SLATE 同机共存时的端口分配">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+<link rel="alternate" hreflang="en" href="../02-install.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="../assets/docs.css">
+</head>
+<body data-page="02-install" data-lang="zh" data-root="../" data-search-empty="没找到匹配的页面" data-search-docs="文档">
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="打开导航" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="../index.html">
+      <span class="brand-mark"><img src="../assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">文档</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>搜索文档</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a>
+      <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="../02-install.html" hreflang="en" title="阅读英文版">English</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="文档导航">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">开始</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">认识 SLATE Teams</a></li><li><a class="nav-link active" href="./02-install.html">安装与启动</a></li><li><a class="nav-link" href="./03-interface.html">界面与页签</a></li></ul></div><div class="nav-group"><div class="nav-group-title">日常</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">模型与用量</a></li><li><a class="nav-link" href="./05-chat-approval.html">对话与审批</a></li></ul></div><div class="nav-group"><div class="nav-group-title">协作</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">团队 · 议事厅</a></li></ul></div><div class="nav-group"><div class="nav-group-title">办公室</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">办公室 · 招人、排班、交付</a></li><li><a class="nav-link" href="./08-office-work.html">办公室 · 像人一样工作</a></li><li><a class="nav-link" href="./09-office-gates.html">办公室 · 门禁与账</a></li></ul></div><div class="nav-group"><div class="nav-group-title">能力</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">黑板与工作流</a></li><li><a class="nav-link" href="./11-extensions.html">扩展</a></li></ul></div><div class="nav-group"><div class="nav-group-title">数据与设置</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">项目、备份与账本</a></li><li><a class="nav-link" href="./13-mobile.html">手机遥控</a></li><li><a class="nav-link" href="./14-settings.html">设置</a></li><li><a class="nav-link" href="./15-faq.html">常见问题</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="面包屑"><a href="../index.html">文档</a><span class="sep">/</span><span>开始</span><span class="sep">/</span><span class="current">安装与启动</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">安装与启动</h1>
+<h2 id="装"><a class="anchor" href="#装" aria-hidden="true">#</a>装</h2>
+<h3 id="windows"><a class="anchor" href="#windows" aria-hidden="true">#</a>Windows</h3>
+<p>下载 <code>SLATE-Teams-Setup-&lt;版本&gt;.exe</code>，双击装完从桌面图标启动。默认装到当前用户的 <code>AppData\Local\Programs\SLATE Teams</code>，不需要管理员权限。</p>
+<p>装完第一次启动会打开一个本地窗口，界面就是 <a href="./03-interface.html">六个页签</a>。</p>
+<h3 id="macos"><a class="anchor" href="#macos" aria-hidden="true">#</a>macOS</h3>
+<p>发行版给的是 <code>SLATE Teams.app</code> 与 <code>SLATE-Teams-Setup-&lt;版本&gt;.dmg</code>；从源码跑用仓库里的 <code>build_macos.sh</code> 打包，或者 <code>python desktop.py</code> 直接起（见下面「源码」）。 装机版的数据目录不在应用包里，而在 <code>~/Library/Application Support/SLATE Teams</code>。</p>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>第一次打开被拦</span></div><div class="callout-body"><p>未签名的包会被 Gatekeeper 拦一下。在「系统设置 → 隐私与安全性」里点「仍要打开」， 只需要做一次。</p></div></div>
+<h3 id="源码"><a class="anchor" href="#源码" aria-hidden="true">#</a>源码</h3>
+<div class="code-block"><div class="code-head"><span class="code-lang">text</span><button class="code-copy" type="button" data-copy data-copied="已复制">复制</button></div><pre><code class="language-text">git clone &lt;仓库地址&gt;
+cd SLATE_Teams
+pip install -r requirements.txt
+python desktop.py</code></pre></div>
+<p><code>desktop.py</code> 会自己起后端、自己开窗口；只想拿接口给别的浏览器用，用 <code>python backend/main.py</code> 起后端，然后开 <code>http://127.0.0.1:&lt;端口&gt;/</code>。</p>
+<h2 id="第一次配模型"><a class="anchor" href="#第一次配模型" aria-hidden="true">#</a>第一次配模型</h2>
+<p>设置 → 模型配置 里填一家厂商的 API Key（顶栏那颗「管理模型密钥」直接跳到这一页）， 选一个默认模型，就能开了。Key 存在本机——<code>data/desktop_state.json</code> 与浏览器本地状态各一份—— 不会出现在任何一条对外请求里，<strong>但它会跟着备份一起走</strong>，看下面那条。</p>
+<div class="callout callout-danger"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 6.4v4.2M10 13.4v.2"/></svg><span>备份里有你的 Key</span></div><div class="callout-body"><p>导出的备份把整份本机状态一起打进去，<strong>其中包含模型 API Key（明文）</strong>。 所以备份文件等同于一串钥匙：不要上传到网盘、不要贴进 issue、不要发给别人。 要分享问题现场，只截界面图、只贴日志。</p></div></div>
+<h2 id="与-slate-同机共存"><a class="anchor" href="#与-slate-同机共存" aria-hidden="true">#</a>与 SLATE 同机共存</h2>
+<p>两个产品可以在同一台机器上并存，互不覆盖：</p>
+<div class="table-wrap"><table><thead><tr><th></th><th>应用端口</th><th>数据</th></tr></thead><tbody><tr><td>SLATE</td><td>各自的默认口</td><td>自己的安装目录 <code>data/</code></td></tr><tr><td>SLATE Teams</td><td>首选 8130（被占则顺延）</td><td>自己的安装目录 <code>data/</code></td></tr></tbody></table></div>
+<p>安装器身份、开始菜单项、更新源都是分开的，所以不会出现"装了 Teams 把 SLATE 的自动更新接走"。</p>
+<h2 id="起不来先看这两处"><a class="anchor" href="#起不来先看这两处" aria-hidden="true">#</a>起不来先看这两处</h2>
+<ol><li><strong>端口被占</strong>：日志 <code>data/desktop_backend.log</code> 里会写它实际拿到的端口。</li><li><strong>依赖没装全</strong>：源码跑最常见，报错会直接说缺哪个包。</li></ol>
+<p>更多在 <a href="./15-faq.html">常见问题</a>。</p></article>
+      <nav class="pager" aria-label="翻页"><a class="prev" href="./01-what-is-teams.html"><span class="dir">上一篇</span><span class="ttl">认识 SLATE Teams</span></a><a class="next" href="./03-interface.html"><span class="dir">下一篇</span><span class="ttl">界面与页签</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams（席）· 一桌人带着 AI 一起干活</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a> ·
+          <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · 文档随产品演进</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="本页目录"><div class="toc-title">本页目录</div><ul class="toc-list"><li class="lv2"><a href="#装">装</a></li><li class="lv3"><a href="#windows">Windows</a></li><li class="lv3"><a href="#macos">macOS</a></li><li class="lv3"><a href="#源码">源码</a></li><li class="lv2"><a href="#第一次配模型">第一次配模型</a></li><li class="lv2"><a href="#与-slate-同机共存">与 SLATE 同机共存</a></li><li class="lv2"><a href="#起不来先看这两处">起不来先看这两处</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文档">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="输入关键词，回车看结果" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
+  </div>
+</div>
+
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>

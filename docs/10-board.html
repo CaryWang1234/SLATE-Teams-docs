@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The board and workflows · SLATE Teams Docs</title>
+<meta name="description" content="Cards and logic chains on the board, its five views, and exactly what a workflow run writes to the screen">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/10-board.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="10-board" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/10-board.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link active" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Capabilities</span><span class="sep">/</span><span class="current">The board and workflows</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">The board and workflows</h1>
+<p>The board is the fourth tab in the top bar, and it is <strong>one global</strong> board: cards, connectors, freehand strokes and text notes stack as four layers on one canvas. It is not split per conversation — its contents are stored with your local settings and are still there when you switch.</p>
+<h2 id="how-cards-form-a-logic-chain"><a class="anchor" href="#how-cards-form-a-logic-chain" aria-hidden="true">#</a>How cards form a logic chain</h2>
+<p>A card carries four things: a <strong>title</strong>, a <strong>description</strong>, a <strong>colour tag</strong>, and <strong>arrow targets</strong> (target card IDs, comma-separated). Double-click a card to edit it in place, drag it to move it, or use the <strong>connect</strong> tool and click two cards to add an edge. Colour is not decoration: red is risk, orange to do, yellow an idea, green done, blue information, purple creative, default unclassified.</p>
+<p>Arrows express dependency and data flow. The kanban view columns cards by colour, the flow view links them into a graph, the outline view collapses parent-child levels, and the Git view reads your repo's commits. All five view buttons sit in the board header and it opens on <strong>kanban</strong>. The toolbar adds pen and text as free layers, with undo-stroke and clear-strokes; header buttons are add card, auto-arrange layout, return to content, AI-organise into a flow chart, show/hide the flow chart (Mermaid), export, clear.</p>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>AI-organise is gated</span></div><div class="callout-body"><p>"AI-organise into a flow chart" is one of the <a href="./14-settings.html">AI-assisted features</a>. Turn it off and the button only explains why — it never sends your board to a model.</p></div></div>
+<h2 id="the-workflow-view-on-the-board"><a class="anchor" href="#the-workflow-view-on-the-board" aria-hidden="true">#</a>The workflow view on the board</h2>
+<p>This column is not a DAG editor. It is three things on one screen:</p>
+<ol><li><strong>A run control bar</strong> — state reads <code>空闲</code> (idle), <code>运行中 · 第 {n} 轮</code> (running, round n), <code>已完成</code> (done), <code>已中断</code> (aborted), with elapsed time beside it, and buttons for stop, run it out, auto-advance, reply mode, thinking effort and "go to team". When this conversation has never run, the list keeps a line saying <code>本场还没有运行记录</code> instead of leaving the previous run's tail on screen.</li><li><strong>Current run</strong> — every tool call this round, with status <code>进行中</code> / <code>完成</code> / <code>失败</code> / <code>已取消</code>, under a heading of <code>当前运行 · {finished}/{total}</code>.</li><li><strong>Process-spec cards</strong> — one Action per card, labelled 共 {n} 步 (n steps), {n} 项输入 (n inputs), 产出落到… (output lands in …). Expand its steps in place, press 运行此流程 to send it into the conversation as an @-mention, or pin it. The author line reads 用户编写 (written by you) or 模型编写 (written by the model).</li></ol>
+<p>Below them sits the <strong>team star map</strong>: the conversation is the centre star, each member a planet, real hand-offs between members drawn as arcs. With no team record for this conversation it says so plainly and tells you where to start one.</p>
+<h2 id="dag-workflows-run-on-the-team-tab"><a class="anchor" href="#dag-workflows-run-on-the-team-tab" aria-hidden="true">#</a>DAG workflows run on the Team tab</h2>
+<p>The thing that executes node by node lives in the <strong>workflow</strong> column of the <a href="./06-team.html">Team</a> tab — a tab beside "team debate".</p>
+<ul><li>Definitions are JSON files; <strong>8</strong> ship built-in under <code>backend/workflows/</code>, and an empty list writes the path to drop them in on the screen.</li><li>The task goes in first and reaches every node as <code>$input</code>; without it the run refuses to start and says so.</li><li>Node states read <code>等待</code> / <code>运行中</code> / <code>成功</code> / <code>失败</code> / <code>跳过</code>; nodes with no dependency between them run <strong>in parallel</strong>, and progress reads <code>运行中（{done}/{n}）…</code>.</li><li>The finished line is <code>{ok}/{n} 节点成功 · 产物已写入知识库（{title}），可在记忆面板查看</code> — "{ok}/{n} nodes succeeded, output written to the knowledge base, viewable in the Memory panel". If every node passed but the write failed, it becomes <code>节点成功 {ok}/{n}，但写入知识库失败: {msg}</code>: <strong>a half run is never reported as success</strong>.</li><li>A failed or skipped upstream node skips everything downstream and names who was responsible. A cycle is reported as <code>DAG 存在环，涉及节点: {nodes}</code> and that workflow does not run.</li><li>A node bound to neither a team member nor an explicit model falls back to the default set under "AI-assisted features → team workflow execution"; a bound node keeps its own binding. A node with no usable model fails outright.</li></ul>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>Run output lands in the knowledge base</span></div><div class="callout-body"><p>Each run becomes one entry titled <code>工作流产物 · {workflow}</code> carrying every node's status, elapsed time, error and output summary. Find it in the <a href="./12-projects-data.html">memory panel</a> — not on the board.</p></div></div>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<ul><li>Creating and rolling back an Action: <a href="./11-extensions.html">Extensions</a>.</li><li>The switch and default model for workflow execution: <a href="./14-settings.html">Settings</a>.</li></ul></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./09-office-gates.html"><span class="dir">Previous</span><span class="ttl">Office · gates &amp; accounts</span></a><a class="next" href="./11-extensions.html"><span class="dir">Next</span><span class="ttl">Extensions</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#how-cards-form-a-logic-chain">How cards form a logic chain</a></li><li class="lv2"><a href="#the-workflow-view-on-the-board">The workflow view on the board</a></li><li class="lv2"><a href="#dag-workflows-run-on-the-team-tab">DAG workflows run on the Team tab</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

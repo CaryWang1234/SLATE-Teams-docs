@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>团队 · 议事厅 · SLATE Teams 文档</title>
+<meta name="description" content="多席位辩论怎么开：真人席位与票据、轮次推进、等你拍板、工作流与留痕">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+<link rel="alternate" hreflang="en" href="../06-team.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="../assets/docs.css">
+</head>
+<body data-page="06-team" data-lang="zh" data-root="../" data-search-empty="没找到匹配的页面" data-search-docs="文档">
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="打开导航" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="../index.html">
+      <span class="brand-mark"><img src="../assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">文档</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>搜索文档</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a>
+      <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="../06-team.html" hreflang="en" title="阅读英文版">English</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="文档导航">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">开始</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">认识 SLATE Teams</a></li><li><a class="nav-link" href="./02-install.html">安装与启动</a></li><li><a class="nav-link" href="./03-interface.html">界面与页签</a></li></ul></div><div class="nav-group"><div class="nav-group-title">日常</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">模型与用量</a></li><li><a class="nav-link" href="./05-chat-approval.html">对话与审批</a></li></ul></div><div class="nav-group"><div class="nav-group-title">协作</div><ul class="nav-list"><li><a class="nav-link active" href="./06-team.html">团队 · 议事厅</a></li></ul></div><div class="nav-group"><div class="nav-group-title">办公室</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">办公室 · 招人、排班、交付</a></li><li><a class="nav-link" href="./08-office-work.html">办公室 · 像人一样工作</a></li><li><a class="nav-link" href="./09-office-gates.html">办公室 · 门禁与账</a></li></ul></div><div class="nav-group"><div class="nav-group-title">能力</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">黑板与工作流</a></li><li><a class="nav-link" href="./11-extensions.html">扩展</a></li></ul></div><div class="nav-group"><div class="nav-group-title">数据与设置</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">项目、备份与账本</a></li><li><a class="nav-link" href="./13-mobile.html">手机遥控</a></li><li><a class="nav-link" href="./14-settings.html">设置</a></li><li><a class="nav-link" href="./15-faq.html">常见问题</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="面包屑"><a href="../index.html">文档</a><span class="sep">/</span><span>协作</span><span class="sep">/</span><span class="current">团队 · 议事厅</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">团队 · 议事厅</h1>
+<p>「团队」页是一张桌子：几个人和几个 AI 席位在同一场讨论里，主持人推进轮次， 结论<strong>由人签字</strong>。界面并排三栏——左边在场席位、中间议事流、右边等你处理的事。</p>
+<h2 id="席位"><a class="anchor" href="#席位" aria-hidden="true">#</a>席位</h2>
+<ul><li><strong>AI 席位</strong> —— 从模型里挑，主持人安排谁先说、说几轮。</li><li><strong>真人席位</strong> —— 点「添加真人席位」发一张<strong>票据</strong>，把入席链接发给对方。对方在自己的浏览器里 打开就能入席，看到的是<strong>这一场</strong>讨论，看不到你机器上的别的东西。</li></ul>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>票据是作用域，不是密码</span></div><div class="callout-body"><p>票据只决定"这个人能进哪一场"。它过期或作废时，对方页面会直接说 「票据已失效，请让主持人重新发一张」，不会静默卡在加载。</p></div></div>
+<p>席位状态在左栏一目了然：<strong>在线</strong>、<strong>暂离</strong>、<strong>未加入</strong>、<strong>超时未发言</strong>。 谁没进来、谁掉线了，不用猜。</p>
+<h2 id="一场讨论怎么跑"><a class="anchor" href="#一场讨论怎么跑" aria-hidden="true">#</a>一场讨论怎么跑</h2>
+<ol><li>主持人开场，第一轮的席位开始发言，议事流里出现分隔尺 <code>—— 第 1 轮 ——</code>。</li><li>每一轮各席依次说话，可以「回应 {name}」点名接话。</li><li>到终局轮，标题是<strong>最终决策</strong>——这一条不是结论，是<strong>等你拍板的提案</strong>。</li><li>停点那一行写「等待你拍板」，给你两个选择：<strong>采纳拍板</strong> 或 <strong>继续讨论</strong>。 采纳之后议事流里记「已采纳这个决策」，并把签字的人记进留痕。</li></ol>
+<p>真人席位可以配两件事：<strong>权限</strong>（能不能发言、能不能拍板），以及<strong>等不到人怎么办</strong> （让 AI 代笔 / 跳过并留痕 / 一直等，最后一种要填等多久）。邀请链接就在这个面板上发。</p>
+<p>真人席位那一侧看到的措辞不一样：轮到他时提示「现在轮到你发言」， 提前打字会告诉他「发言会在轮到你时被采纳」，其余时间显示「等 {name} 发言…」。 他表态用的是这几种：<strong>提案</strong>、<strong>支持</strong>、<strong>反对</strong>、<strong>反驳</strong>、<strong>补充</strong>、<strong>决策</strong>。</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>决策不会自己生效</span></div><div class="callout-body"><p>只有你拍板的那一条算结论。夜间模式（全托管）下系统会替你采纳， 议事流里会明写「夜间模式：决策已自动采纳」——这一条是例外，不是默认。</p></div></div>
+<h2 id="黑板工作流"><a class="anchor" href="#黑板工作流" aria-hidden="true">#</a>黑板工作流</h2>
+<p>团队页也能跑黑板上的工作流：节点逐个执行，进度写成 <code>{ok}/{n} 节点成功</code>， 失败会停下来说明哪一步断掉，而不是把半截结果当成功。</p>
+<h2 id="每句话都留得下"><a class="anchor" href="#每句话都留得下" aria-hidden="true">#</a>每句话都留得下</h2>
+<p>发言、轮次、拍板、工具调用都落本地库，跟着备份一起走 （议事四张表在 <a href="./12-projects-data.html">项目与数据</a> 里列了）。 换机器、恢复历史、或者把某场讨论单独清掉，都按那章的两种口径分开做。</p>
+<h2 id="下一步"><a class="anchor" href="#下一步" aria-hidden="true">#</a>下一步</h2>
+<ul><li>想让活在你不在场的时候也被做完：<a href="./07-office.html">办公室</a>。</li><li>想看清每句话背后的工具调用：<a href="./05-chat-approval.html">对话与审批</a>。</li></ul></article>
+      <nav class="pager" aria-label="翻页"><a class="prev" href="./05-chat-approval.html"><span class="dir">上一篇</span><span class="ttl">对话与审批</span></a><a class="next" href="./07-office.html"><span class="dir">下一篇</span><span class="ttl">办公室 · 招人、排班、交付</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams（席）· 一桌人带着 AI 一起干活</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a> ·
+          <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · 文档随产品演进</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="本页目录"><div class="toc-title">本页目录</div><ul class="toc-list"><li class="lv2"><a href="#席位">席位</a></li><li class="lv2"><a href="#一场讨论怎么跑">一场讨论怎么跑</a></li><li class="lv2"><a href="#黑板工作流">黑板工作流</a></li><li class="lv2"><a href="#每句话都留得下">每句话都留得下</a></li><li class="lv2"><a href="#下一步">下一步</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文档">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="输入关键词，回车看结果" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
+  </div>
+</div>
+
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>

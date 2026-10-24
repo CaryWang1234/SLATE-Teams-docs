@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settings · SLATE Teams Docs</title>
+<meta name="description" content="What the 21 groups in the settings sidebar each cover, with the detail on models and context, custom theme, and AI-assisted features">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/14-settings.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="14-settings" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/14-settings.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link active" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Data &amp; settings</span><span class="sep">/</span><span class="current">Settings</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Settings</h1>
+<p>Settings is the sixth tab in the top bar. The left column is an anchor navigation with a search box above it; the right column holds the grouped blocks. <strong>The navigation is read from the blocks at runtime</strong>, so the group count follows the version while the order always matches the main area. There are <strong>21 groups</strong>: Models · API test · Usage · Context &amp; project · Auto-advance · AI-assisted features · Notifications · Background tasks · Parallel runs &amp; projects · Minimal UI (experimental) · Custom theme · Web search · Image generation · Video generation · Approval mode · Backup &amp; restore · Session archive · Storage · LAN remote control · Typing game · About.</p>
+<p>Press <strong>Save</strong> at the top right to write everything. Interface language is <strong>not here</strong>: it is chosen at install time (written to <code>data/language.txt</code>) and never switched inside the app, with precedence <code>SLATE_LANG</code> &gt; that file &gt; Chinese.</p>
+<h2 id="models-and-context"><a class="anchor" href="#models-and-context" aria-hidden="true">#</a>Models and context</h2>
+<p><strong>Models</strong> does two jobs: custom models (name/ID, request style — OpenAI-compatible, Anthropic, or raw curl — Base URL, API Key, context window) and the keys for built-in models, plus an optional Responses API switch. <strong>API test</strong> fires one minimal request down the real chain — the same one a conversation uses, not a parallel one.</p>
+<p><strong>Context &amp; project</strong> decides how much a model can see at once. Built-in models and models with a declared window run on "auto", each taking eighty percent of its nominal window, so the global cap here is only a backstop for models with no window information; to tune one model, use the "max context" control on its row in Models — the slider is a rough pick, the number box beside it takes an exact value, and local or custom endpoints can <strong>probe the window</strong>. The compression threshold and the context meter compute from that same number. Then: a single-output cap of 1024–65536, with "Raises the output length limit to 65536 when writing files so large files are not truncated" on by default; "auto-confirm file creation and modification" on by default, and off it returns to preview-then-accept for every write; and the <strong>project constitution</strong> — standing hard rules for this project, with the prompt factory entry point in the same group.</p>
+<h2 id="custom-theme"><a class="anchor" href="#custom-theme" aria-hidden="true">#</a>Custom theme</h2>
+<p>With a custom theme enabled you fill in <strong>only four source colours</strong> (page background, panel, body text, accent); every other value is derived from them by luminance and contrast, so body text and the three secondary levels are pulled up to readable. The preset palette has <strong>10 tiers</strong>: paper, ink night, mist blue, deep sea, pine, moss, clay, dusk plum, graphite, letterpress. A preset fills the four swatches and each stays editable — but <strong>once edited, the theme belongs to no preset</strong>.</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>Light/dark is locked while it's on</span></div><div class="callout-body"><p>With a custom theme active, the top-bar light/dark button and Ctrl+D do nothing; pressing one tells you why. Switching the custom theme off returns the whole look to the built-in theme.</p></div></div>
+<ul><li><strong>Fonts</strong>: families installed on the system are used by name. "Import font" takes one <code>.woff2 / .woff / .ttf / .otf</code> file up to 16MB and it lands <strong>only on this machine, under <code>data/theme/fonts/</code></strong> — not in conversation records, not in the repository, not in the installer, and it does not travel to another machine with a backup; with one weight imported, the browser fakes bold and italic.</li><li><strong>Panel opacity</strong> (55%–100%) is a <strong>flat alpha</strong> on the panel, card, input and assistant-bubble layer: lowering it reveals the page colour or your wallpaper behind it, and <strong>it is not frosted-glass blur</strong>. Your own bubbles and code blocks always stay solid.</li><li><strong>Background image</strong> is stored on this machine under <code>data/theme/</code>, with a veil slider (40%–95%) — too low and body text sits on the picture, too high and the picture might as well not be there. The Wallpaper Engine row only reads that app's own configuration and preview image and uses it as your background; it does not start the app or change its settings.</li></ul>
+<h2 id="ai-assisted-features"><a class="anchor" href="#ai-assisted-features" aria-hidden="true">#</a>AI-assisted features</h2>
+<p>Every feature that calls a model <strong>on its own</strong> — apart from conversation, team debate and the prompt factory — is in this group: <strong>15 items</strong>, each with its own switch, and <strong>12 of them</strong> can pick their own model. The other three carry no model picker because ownership differs: scheduled and event tasks choose a model <strong>inside each task</strong>; image and video generation are configured in their own blocks. <strong>Switch an item off and no request is made for it again.</strong> The twelve are context compression summary, memory auto-distillation, manual memory extraction, conversation insight capture, automatic session title, code understanding document, code review, board AI organize, prompt polish, sub-agent parallelism, dangerous-command purpose explanation and team workflow execution. (The Auto-advance reviewer model and the background-task auto-resume are set in their own groups, not repeated here.)</p>
+<h2 id="why-capability-management-isnt-here"><a class="anchor" href="#why-capability-management-isnt-here" aria-hidden="true">#</a>Why capability management isn't here</h2>
+<p>Tools, skills, reply modes, expert packs, MCP servers and Actions all live on the <a href="./11-extensions.html">Extensions</a> tab — the <strong>single source of truth</strong> for the capability list. Settings keeps two kinds of thing: <strong>provider configuration</strong> for capabilities (the web-search engine and rendering mode, the image/video model and key) and the <strong>call gate</strong> (those 15 switches above). Each half of one concern stays in exactly one place.</p>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>Approval mode is here, reply mode is not</span></div><div class="callout-body"><p>This page sets the default <strong>approval mode</strong> for new conversations (manual / auto / full access / night). A <strong>reply mode</strong> is <a href="./11-extensions.html">a different thing</a>, chosen per conversation above the input box.</p></div></div>
+<h2 id="data-and-devices"><a class="anchor" href="#data-and-devices" aria-hidden="true">#</a>Data and devices</h2>
+<p><strong>Backup &amp; restore</strong> exports one JSON (conversations, debates and the ledger, the staff roster and duty schedule, memories, assets, settings); restore merges by id and never overwrites what is there — <a href="./12-projects-data.html">Projects &amp; data</a>. <strong>Session archive</strong> holds archived sessions, restorable or deletable for good; <strong>Storage</strong> compacts the database and clears caches; <strong>LAN remote control</strong> serves this machine's address to a phone or tablet — see <a href="./13-mobile.html">Mobile</a>.</p></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./13-mobile.html"><span class="dir">Previous</span><span class="ttl">Phone remote control</span></a><a class="next" href="./15-faq.html"><span class="dir">Next</span><span class="ttl">FAQ</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#models-and-context">Models and context</a></li><li class="lv2"><a href="#custom-theme">Custom theme</a></li><li class="lv2"><a href="#ai-assisted-features">AI-assisted features</a></li><li class="lv2"><a href="#why-capability-management-isnt-here">Why capability management isn&#x27;t here</a></li><li class="lv2"><a href="#data-and-devices">Data and devices</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

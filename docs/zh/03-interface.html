@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>界面与页签 · SLATE Teams 文档</title>
+<meta name="description" content="六个顶层页签各装什么，团队页的三栏，明暗与十档自定义主题预设，界面语言与提示词工厂的入口">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+<link rel="alternate" hreflang="en" href="../03-interface.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="../assets/docs.css">
+</head>
+<body data-page="03-interface" data-lang="zh" data-root="../" data-search-empty="没找到匹配的页面" data-search-docs="文档">
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="打开导航" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="../index.html">
+      <span class="brand-mark"><img src="../assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">文档</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>搜索文档</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a>
+      <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="../03-interface.html" hreflang="en" title="阅读英文版">English</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="文档导航">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">开始</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">认识 SLATE Teams</a></li><li><a class="nav-link" href="./02-install.html">安装与启动</a></li><li><a class="nav-link active" href="./03-interface.html">界面与页签</a></li></ul></div><div class="nav-group"><div class="nav-group-title">日常</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">模型与用量</a></li><li><a class="nav-link" href="./05-chat-approval.html">对话与审批</a></li></ul></div><div class="nav-group"><div class="nav-group-title">协作</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">团队 · 议事厅</a></li></ul></div><div class="nav-group"><div class="nav-group-title">办公室</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">办公室 · 招人、排班、交付</a></li><li><a class="nav-link" href="./08-office-work.html">办公室 · 像人一样工作</a></li><li><a class="nav-link" href="./09-office-gates.html">办公室 · 门禁与账</a></li></ul></div><div class="nav-group"><div class="nav-group-title">能力</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">黑板与工作流</a></li><li><a class="nav-link" href="./11-extensions.html">扩展</a></li></ul></div><div class="nav-group"><div class="nav-group-title">数据与设置</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">项目、备份与账本</a></li><li><a class="nav-link" href="./13-mobile.html">手机遥控</a></li><li><a class="nav-link" href="./14-settings.html">设置</a></li><li><a class="nav-link" href="./15-faq.html">常见问题</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="面包屑"><a href="../index.html">文档</a><span class="sep">/</span><span>开始</span><span class="sep">/</span><span class="current">界面与页签</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">界面与页签</h1>
+<p>界面是一张顶栏加一块工作区。顶栏中间排着六个页签，右边四颗按钮：<strong>密钥</strong>、<strong>遥控</strong>、<strong>明暗</strong>、<strong>设置</strong>。</p>
+<h2 id="六个页签"><a class="anchor" href="#六个页签" aria-hidden="true">#</a>六个页签</h2>
+<div class="table-wrap"><table><thead><tr><th>页签</th><th>它装什么</th><th>细写在哪</th></tr></thead><tbody><tr><td>对话</td><td>常规的一对一会话：边栏、消息流、顶部用量条、输入区工具行</td><td><a href="./05-chat-approval.html">对话与审批</a></td></tr><tr><td>团队</td><td>议事厅：在场席位、议事流、等你拍板</td><td><a href="./06-team.html">团队</a></td></tr><tr><td>办公室</td><td>AI 员工花名册、虚拟办公室、交办输入区，右侧五个页签：动态 / 等你拍板 / 值班表 / 岗位 / 站会与绩效</td><td><a href="./07-office.html">办公室</a></td></tr><tr><td>黑板</td><td>卡片式逻辑链与画笔层，五种显示视图：Git / 流程 / 看板 / 纲要 / 工作流</td><td><a href="./10-board.html">黑板</a></td></tr><tr><td>扩展</td><td>模型可用能力的总开关，七栏：技能 SKILL.md、工具、模式、新功能、MCP 服务、专家包、Actions</td><td><a href="./11-extensions.html">扩展</a></td></tr><tr><td>设置</td><td>模型与密钥、上下文与项目、审批模式、主题、通知、备份与存储，一块块往下排</td><td><a href="./14-settings.html">设置</a></td></tr></tbody></table></div>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>对话页的左栏不是第七个页签</span></div><div class="callout-body"><p>「项目 / 任务 / 总结」是<strong>对话页内部</strong>的一列边栏，切它们不会离开对话。 右边那一竖栏叠着任务清单、后台任务与磨墨面板，同样各管各的开合。</p></div></div>
+<h2 id="团队页的三栏"><a class="anchor" href="#团队页的三栏" aria-hidden="true">#</a>团队页的三栏</h2>
+<p>三栏是一张会议桌的形状，各回答一件事：</p>
+<ul><li><strong>左栏 · 在场</strong> —— 谁在这桌上（AI 席位与<a href="./06-team.html">真人席位</a>），下面还有「团队预设」和「团队历史」。 历史名单同放左栏，因为两者读的是同一件事：这一场是怎么凑起来的。</li><li><strong>中栏 · 议事流</strong> —— 议题输入、最大辩论轮数、这一场的用量条，下面是「团队讨论 / 工作流」两个视图。</li><li><strong>右栏 · 待你签字</strong> —— 只有主持人能做的动作：「决策需我拍板」开关，以及等你处理的条目。</li></ul>
+<h2 id="主题"><a class="anchor" href="#主题" aria-hidden="true">#</a>主题</h2>
+<p>内置两套：<strong>浅色</strong>与<strong>深色</strong>。顶栏「明暗」按钮切换，快捷键 <code>Ctrl+D</code>（macOS 上是 <code>⌘D</code>）。</p>
+<p>再往下是<strong>自定义主题</strong>（设置 → 自定义主题）：只填四个源色——页面底色、面板底色、正文颜色、强调颜色， 其余三十几个色值由它们按亮度与对比度算出来，保证正文与三个次要层级都读得清。 同一页还能调板块透明度、导入字体文件、换背景图（或取 Wallpaper Engine 的当前壁纸）。</p>
+<div class="callout callout-tip"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 13.4V9M10 6.6v.6"/><path d="M7.6 12.4h4.8"/></svg><span>基础预设是十档</span></div><div class="callout-body"><p>预设行给的是<strong>十档</strong>整套源色：簿纸、墨夜、雾蓝、深海、松墨、苔绿、陶土、暮紫、石墨、铅字。 点一档就把整套色填进色板，之后仍可逐格改——改过之后它就不再属于任何预设。</p></div></div>
+<p>开启自定义主题期间明暗切换被锁住：顶栏按钮与 <code>Ctrl+D</code> 都不生效，点它会说明原因。 关掉自定义主题，整段注入的样式一起摘掉，一个像素都不留。</p>
+<h2 id="界面语言"><a class="anchor" href="#界面语言" aria-hidden="true">#</a>界面语言</h2>
+<p><strong>应用内没有语言开关。</strong>语言在安装时选定，安装程序把它写进 <code>data/language.txt</code>（<code>zh</code> 或 <code>en</code>），运行时只读。</p>
+<p>要换语言：改 <code>data/language.txt</code>，或者用环境变量 <code>SLATE_LANG</code> 启动（优先级更高），然后重启。</p>
+<p>翻译只作用于界面文字，连按钮的提示与输入框的占位符都算；模型生成的内容、你的输入、代码块不翻。</p>
+<h2 id="提示词工厂"><a class="anchor" href="#提示词工厂" aria-hidden="true">#</a>提示词工厂</h2>
+<p>它不再占一个页签。入口在<strong>设置 → 上下文与项目</strong>里那颗「打开工作台」。</p>
+<p>工厂把宪法摘要、上下文片段、任务描述、约束与交付要求整合成一份可交付 Prompt。 收起只是加一层隐藏：再打开时已写的内容、勾过的文件、生成结果都还在。</p>
+<h2 id="下一步"><a class="anchor" href="#下一步" aria-hidden="true">#</a>下一步</h2>
+<ol><li><a href="./04-models.html">模型与用量</a> —— 配一个模型，看懂顶部那条用量栏。</li><li><a href="./05-chat-approval.html">对话与审批</a> —— 审批到底几档，各档拦住什么。</li></ol></article>
+      <nav class="pager" aria-label="翻页"><a class="prev" href="./02-install.html"><span class="dir">上一篇</span><span class="ttl">安装与启动</span></a><a class="next" href="./04-models.html"><span class="dir">下一篇</span><span class="ttl">模型与用量</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams（席）· 一桌人带着 AI 一起干活</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a> ·
+          <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · 文档随产品演进</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="本页目录"><div class="toc-title">本页目录</div><ul class="toc-list"><li class="lv2"><a href="#六个页签">六个页签</a></li><li class="lv2"><a href="#团队页的三栏">团队页的三栏</a></li><li class="lv2"><a href="#主题">主题</a></li><li class="lv2"><a href="#界面语言">界面语言</a></li><li class="lv2"><a href="#提示词工厂">提示词工厂</a></li><li class="lv2"><a href="#下一步">下一步</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文档">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="输入关键词，回车看结果" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
+  </div>
+</div>
+
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>

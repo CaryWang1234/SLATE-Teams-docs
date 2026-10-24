@@ -40,9 +40,10 @@ browser, run `python backend/main.py` and open `http://127.0.0.1:<port>/`.
 
 ## Configure your first model
 
-Settings → 模型/上下文 (models & context): fill in one provider's API key, pick a default model,
-and you're running. The key is written only into the local `data/desktop_state.json`; it never
-appears in an outbound request and never enters a backup.
+Settings → model config (the "管理模型密钥" button in the header jumps straight there): fill in one
+provider's API key, pick a default model, and you're running. The key stays local — one copy in
+`data/desktop_state.json`, one in browser state — and never appears in an outbound request,
+**but it does travel with your backup**. See the next box.
 
 :::danger Your keys are inside the backup
 The export packs in the whole local state, **including model API keys in plaintext**. A backup file is

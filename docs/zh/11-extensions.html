@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>扩展 · SLATE Teams 文档</title>
+<meta name="description" content="扩展页七栏分别管哪类能力，每栏里你能做什么，回复模式与专家包各自是什么">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+<link rel="alternate" hreflang="en" href="../11-extensions.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="../assets/docs.css">
+</head>
+<body data-page="11-extensions" data-lang="zh" data-root="../" data-search-empty="没找到匹配的页面" data-search-docs="文档">
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="打开导航" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="../index.html">
+      <span class="brand-mark"><img src="../assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">文档</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>搜索文档</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a>
+      <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="../11-extensions.html" hreflang="en" title="阅读英文版">English</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="文档导航">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">开始</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">认识 SLATE Teams</a></li><li><a class="nav-link" href="./02-install.html">安装与启动</a></li><li><a class="nav-link" href="./03-interface.html">界面与页签</a></li></ul></div><div class="nav-group"><div class="nav-group-title">日常</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">模型与用量</a></li><li><a class="nav-link" href="./05-chat-approval.html">对话与审批</a></li></ul></div><div class="nav-group"><div class="nav-group-title">协作</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">团队 · 议事厅</a></li></ul></div><div class="nav-group"><div class="nav-group-title">办公室</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">办公室 · 招人、排班、交付</a></li><li><a class="nav-link" href="./08-office-work.html">办公室 · 像人一样工作</a></li><li><a class="nav-link" href="./09-office-gates.html">办公室 · 门禁与账</a></li></ul></div><div class="nav-group"><div class="nav-group-title">能力</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">黑板与工作流</a></li><li><a class="nav-link active" href="./11-extensions.html">扩展</a></li></ul></div><div class="nav-group"><div class="nav-group-title">数据与设置</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">项目、备份与账本</a></li><li><a class="nav-link" href="./13-mobile.html">手机遥控</a></li><li><a class="nav-link" href="./14-settings.html">设置</a></li><li><a class="nav-link" href="./15-faq.html">常见问题</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="面包屑"><a href="../index.html">文档</a><span class="sep">/</span><span>能力</span><span class="sep">/</span><span class="current">扩展</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">扩展</h1>
+<p>扩展是顶栏第五个页签，副标题一句话：<strong>模型可用的能力在此页决定</strong>。 左栏是一条分栏轨，七栏各带一个计数；轨上的数字与栏内标题上的数字同源，一处刷新两处一起变。</p>
+<div class="table-wrap"><table><thead><tr><th>栏</th><th>管什么</th><th>你能做什么</th></tr></thead><tbody><tr><td>技能</td><td>一份写给模型的做事说明（SKILL.md）</td><td>新建、从本地路径导入、从 GitHub 仓库导入、扫描标准目录发现已装插件、删除、点开试跑</td></tr><tr><td>工具</td><td>后端常驻能力，模型经 skill_run 调用</td><td>只读清单，点开可执行；<strong>内置工具不可删除</strong></td></tr><tr><td>模式</td><td>回复模式</td><td>内置四档只读，自定义可增改删</td></tr><tr><td>新功能</td><td>SLATE 自己生成的工具，放在 <code>data/evolved/</code></td><td>启用 / 停用、回滚到历史版本、撤销（删前先进历史）</td></tr><tr><td>MCP</td><td>外部 MCP Server 带来的远程工具</td><td>添加、连接 / 断开、删除、按项目单独启停</td></tr><tr><td>专家包</td><td>角色设定 + 规则 + 知识库 + 技能打成一份包</td><td>新建、导入 zip、导出、增删包内文件</td></tr><tr><td>Actions</td><td>流程说明书</td><td>新建、编辑、删除、回滚</td></tr></tbody></table></div>
+<h2 id="技能与工具不是一回事"><a class="anchor" href="#技能与工具不是一回事" aria-hidden="true">#</a>技能与工具不是一回事</h2>
+<p><strong>技能</strong>是一份 SKILL.md：你用自然语言写清"遇到这类活怎么做"，导入后模型按任务自己取用。 随产品带的示例技能有 <strong>6 份</strong>（代码审查、提交信息、设计、调研、周报、Windows 排障）。</p>
+<p><strong>工具</strong>是后端常驻的代码能力，这一栏列的是内置注册表里的 <strong>35 项</strong>——从读文件、改文件、跑终端、 后台任务，到生成 PPT/Word/Excel/PDF、浏览器与桌面自动化、联网搜索与网页获取。 它们只读、不可删除；你在界面上能关掉的，是<a href="./14-settings.html">设置</a>里那些会自行调模型的功能： <strong>关掉的功能连模型的工具目录都不会出现</strong>。</p>
+<p>另有一批对话内工具（读写黑板、工位递话、建回复模式、收口目标模式等）不在这张清单里单列， 由回复模式的工具白名单决定开不开。</p>
+<div class="callout callout-tip"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 13.4V9M10 6.6v.6"/><path d="M7.6 12.4h4.8"/></svg><span>想加新工具而不想写代码</span></div><div class="callout-body"><p>用「工具工厂」（内置工具 mcp_factory）生成一个，产物落在 <code>data/evolved/</code>， 出现在<strong>新功能</strong>这一栏，随时可停用、回滚、撤销。每次覆盖、撤销、回滚都先存入历史版本，最多留 5 版。</p></div></div>
+<h2 id="回复模式"><a class="anchor" href="#回复模式" aria-hidden="true">#</a>回复模式</h2>
+<p>回复模式决定<strong>这一场对话用哪套提示词、开放哪些工具、跑几轮、思考强度多高、用哪只模型</strong>。 内置四档只读：<strong>智能</strong>（带全套工具）、<strong>对话</strong>（不给工具，一轮就停）、<strong>经济</strong>（只给只读工具、 低强度、12 轮）、<strong>狂暴</strong>（全套工具、高强度、40 轮，中途不停下来等确认）。</p>
+<p>自定义模式是一份完整规格：id、显示名、图标、颜色、追加提示词、工具白名单（逐格勾）、 推理强度、轮数上限、指定模型（默认跟随当前主模型）。模型自己也能建模式——它调 mode_write 工具，落点与你手动建的是同一份注册表。</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>两件事别混</span></div><div class="callout-body"><p>在输入框上方改的是<strong>这一场用哪个模式</strong>；在扩展页「模式」栏改的是<strong>模式本身长什么样</strong>。 删除一个正在被使用的自定义模式不会崩，用到它的会话回落到默认模式。</p></div></div>
+<p>审批模式（手动 / 自动 / 完全访问 / 夜间）是另一套东西，管的是<strong>命令与联网要不要问你</strong>， 在设置页里定默认档，见<a href="./05-chat-approval.html">对话与审批</a>。</p>
+<h2 id="专家包"><a class="anchor" href="#专家包" aria-hidden="true">#</a>专家包</h2>
+<p>一份专家包 = 人格设定 + 行为规则 + 知识库文件 + 技能文件，打成一个可切换的整体。 随产品带的示例包有 <strong>3 份</strong>。用法两条：对话时在下方的专家包选择器里选一份注入这一场； 在<a href="./06-team.html">团队</a>里则挂到某个 AI 席位上。</p>
+<h2 id="mcp-与-actions"><a class="anchor" href="#mcp-与-actions" aria-hidden="true">#</a>MCP 与 Actions</h2>
+<p>MCP 这一栏连的是外部 Server，连上后它的远程工具进入模型视野；与内置同名的远程工具由内置接管。 每台服务器可以全局停用，也可以只对当前项目单独启用或停用（项目掩码），摘掉掩码就回到全局配置。</p>
+<p>Actions 是一份份<strong>流程说明书</strong>：把常规操作写成必需步骤，模型按流程执行。 存成 <code>data/actions/&lt;id&gt;.yml</code>，也可以放进项目自己的 <code>.slate/actions/</code>——项目里同名的那份优先。 每次覆盖都留底，最多 5 版，可回滚；解析不了的旧版本不允许盖回去。 在<a href="./10-board.html">黑板的工作流视图</a>里，一份 Action 就是一张可就地运行的卡片。</p>
+<h2 id="下一步"><a class="anchor" href="#下一步" aria-hidden="true">#</a>下一步</h2>
+<ul><li>哪些功能会自行调模型、怎么逐项关掉：<a href="./14-settings.html">设置</a>。</li></ul></article>
+      <nav class="pager" aria-label="翻页"><a class="prev" href="./10-board.html"><span class="dir">上一篇</span><span class="ttl">黑板与工作流</span></a><a class="next" href="./12-projects-data.html"><span class="dir">下一篇</span><span class="ttl">项目、备份与账本</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams（席）· 一桌人带着 AI 一起干活</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a> ·
+          <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · 文档随产品演进</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="本页目录"><div class="toc-title">本页目录</div><ul class="toc-list"><li class="lv2"><a href="#技能与工具不是一回事">技能与工具不是一回事</a></li><li class="lv2"><a href="#回复模式">回复模式</a></li><li class="lv2"><a href="#专家包">专家包</a></li><li class="lv2"><a href="#mcp-与-actions">MCP 与 Actions</a></li><li class="lv2"><a href="#下一步">下一步</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文档">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="输入关键词，回车看结果" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
+  </div>
+</div>
+
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>

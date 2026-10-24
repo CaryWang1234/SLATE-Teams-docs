@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extensions · SLATE Teams Docs</title>
+<meta name="description" content="What each of the seven extension columns governs, what you can do in them, and what a reply mode or expert pack actually is">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/11-extensions.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="11-extensions" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/11-extensions.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link active" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Capabilities</span><span class="sep">/</span><span class="current">Extensions</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Extensions</h1>
+<p>Extensions is the fifth tab in the top bar, and its subtitle states the whole remit: <strong>the capabilities available to a model are decided on this page</strong>. The left rail holds seven columns, each with a count; the rail number and the heading number come from one source, so they change together.</p>
+<div class="table-wrap"><table><thead><tr><th>Column</th><th>What it governs</th><th>What you can do</th></tr></thead><tbody><tr><td>Skills</td><td>A written "how to do this kind of job" note for the model (SKILL.md)</td><td>Create, import from a local path, import from a GitHub repo, discover plugins in standard directories, delete, open one and try it</td></tr><tr><td>Tools</td><td>Resident backend capabilities, called through skill_run</td><td>Read-only list, open one to run it; <strong>built-in tools cannot be deleted</strong></td></tr><tr><td>Modes</td><td>Reply modes</td><td>Four built-in tiers read-only; custom modes added, edited, deleted</td></tr><tr><td>New capabilities</td><td>Tools SLATE generated for itself, under <code>data/evolved/</code></td><td>Enable / disable, roll back, revoke (source goes to history first)</td></tr><tr><td>MCP</td><td>Remote tools brought by external MCP servers</td><td>Add, connect / disconnect, delete, enable or disable per project</td></tr><tr><td>Expert packs</td><td>Persona + rules + knowledge base + skills bundled as one switchable expert</td><td>Create, import a zip, export, add or remove files inside</td></tr><tr><td>Actions</td><td>Process specifications</td><td>Create, edit, delete, roll back</td></tr></tbody></table></div>
+<h2 id="skills-and-tools-are-not-the-same-thing"><a class="anchor" href="#skills-and-tools-are-not-the-same-thing" aria-hidden="true">#</a>Skills and tools are not the same thing</h2>
+<p>A <strong>skill</strong> is one SKILL.md: you write in plain language how this kind of job should be done, and after import the model picks it up by task. <strong>6</strong> sample skills ship with the product (code review, commit message, design, research, weekly report, Windows troubleshooting).</p>
+<p><strong>Tools</strong> are capabilities implemented in backend code. This column lists the <strong>35</strong> entries of the built-in registry — reading and editing files, terminals and background tasks, generating PPT/Word/Excel/PDF, browser and desktop automation, web search and page fetching. They are read-only here. What you <em>can</em> switch off is the set of features that call a model on their own, under <a href="./14-settings.html">Settings</a>: <strong>a capability switched off does not even appear in the model's tool catalogue.</strong> A separate group of in-conversation tools (board read/write, passing work between desks, creating reply modes, closing out a target mode) is not listed there; the reply mode's tool whitelist decides those.</p>
+<div class="callout callout-tip"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 13.4V9M10 6.6v.6"/><path d="M7.6 12.4h4.8"/></svg><span>Adding a tool without writing one by hand</span></div><div class="callout-body"><p>Use the tool factory (built-in tool <code>mcp_factory</code>) to generate one. It lands in <code>data/evolved/</code> and shows up in the <strong>New capabilities</strong> column, where it can be disabled, rolled back or revoked at any time. Every overwrite, revocation and rollback stores the previous content first; up to 5 versions are kept.</p></div></div>
+<h2 id="reply-mode"><a class="anchor" href="#reply-mode" aria-hidden="true">#</a>Reply mode</h2>
+<p>A reply mode decides <strong>which prompt set this conversation uses, which tools are open, how many rounds it runs, how hard it thinks and which model answers</strong>. The four read-only built-ins are <strong>smart</strong> (full tool set), <strong>chat</strong> (no tools at all, one round), <strong>economy</strong> (read-only tools only — it can see the project and skill catalogues but cannot write, run a command or spend generation quota; low effort, 12 rounds) and <strong>turbo</strong> (full tool set, high effort, 40 rounds, no stopping to ask).</p>
+<p>A custom mode is a full specification: id, display name, icon, colour, appended prompt, tool whitelist ticked item by item, reasoning effort, round limit and a chosen model (follows the current main model by default). The model can create modes too — it calls <code>mode_write</code>, and the result lands in the same registry as your manual edits.</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>Don't conflate two things</span></div><div class="callout-body"><p>Above the input box you change <strong>which mode this conversation uses</strong>; in the "Modes" column you change <strong>what the mode itself is</strong>. Deleting a custom mode that is in use breaks nothing — those conversations fall back to the default mode.</p></div></div>
+<p>Approval mode (manual / auto / full access / night) is a different mechanism governing <strong>whether commands and network access ask you first</strong>; its default is set in Settings, and <a href="./05-chat-approval.html">Chat &amp; approval</a> covers it.</p>
+<h2 id="expert-pack"><a class="anchor" href="#expert-pack" aria-hidden="true">#</a>Expert pack</h2>
+<p>One expert pack = persona + behaviour rules + knowledge-base files + skill files, bundled as a single switchable whole. <strong>3</strong> sample packs ship with the product. Two ways to use one: pick it from the expert selector under the input box to inject it into this conversation, or attach it to an AI seat in the <a href="./06-team.html">Team</a> tab.</p>
+<h2 id="mcp-and-actions"><a class="anchor" href="#mcp-and-actions" aria-hidden="true">#</a>MCP and Actions</h2>
+<p>The MCP column connects to external servers; once connected their remote tools enter the model's view, and a remote tool sharing a built-in name is overridden by the built-in. Each server can be disabled globally or enabled/disabled for the current project alone (a project mask) — removing the mask returns it to the global configuration.</p>
+<p>Actions are <strong>process specifications</strong>: routine operations written as required steps, which the model then follows. They are stored as <code>data/actions/&lt;id&gt;.yml</code>, or in a project's own <code>.slate/actions/</code> where a same-named project Action wins. Every overwrite keeps a backup, up to 5 versions, and can be rolled back; a stored version that no longer parses is not allowed to be written back. In the <a href="./10-board.html">board's workflow view</a>, one Action is one runnable card.</p>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<ul><li>Which features call a model on their own, and how to switch each off: <a href="./14-settings.html">Settings</a>.</li></ul></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./10-board.html"><span class="dir">Previous</span><span class="ttl">The board and workflows</span></a><a class="next" href="./12-projects-data.html"><span class="dir">Next</span><span class="ttl">Projects, backups and the ledger</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#skills-and-tools-are-not-the-same-thing">Skills and tools are not the same thing</a></li><li class="lv2"><a href="#reply-mode">Reply mode</a></li><li class="lv2"><a href="#expert-pack">Expert pack</a></li><li class="lv2"><a href="#mcp-and-actions">MCP and Actions</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

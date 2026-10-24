@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone remote control · SLATE Teams Docs</title>
+<meta name="description" content="What the phone screen has and doesn&#x27;t have, where the remote-control switch lives, and what headless mode is for">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/13-mobile.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="13-mobile" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/13-mobile.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link active" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Data &amp; settings</span><span class="sep">/</span><span class="current">Phone remote control</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Phone remote control</h1>
+<p>Remote control is <strong>the same backend with a different face</strong>: your phone's browser talks to the backend on your machine and drives the same engine — no second service, no second way of executing.</p>
+<h2 id="what-the-phone-has"><a class="anchor" href="#what-the-phone-has" aria-hidden="true">#</a>What the phone has</h2>
+<p>Five tabs: <strong>Chat</strong>, <strong>Chats</strong> (the session list), <strong>Memory</strong>, <strong>Tasks</strong>, <strong>Settings</strong>.</p>
+<ul><li>Streaming replies, collapsed reasoning and tool cards all work; tools really touch files (create, edit and append go through the same endpoints as on the desktop).</li><li>Approval became a bottom sheet: risky commands and file changes still need your nod, with a diff preview before anything lands.</li><li>Settings holds four things: the remote-control address with its QR code, model choice, keys, theme. Background-task events are read back into a finished pass as usual.</li></ul>
+<h2 id="what-the-phone-doesnt-have"><a class="anchor" href="#what-the-phone-doesnt-have" aria-hidden="true">#</a>What the phone doesn't have</h2>
+<p>The <strong>Team</strong>, <strong>Office</strong>, <strong>Board</strong> and <strong>Extensions</strong> tabs exist on the desktop only. So:</p>
+<ul><li>You can't open a debate from a phone and can't see the delivery queue. A participant holding a ticket lands on another page entirely — that discussion and nothing else.</li><li>A phone page <strong>never claims office work</strong>. The backend only queues; the one on duty is the desktop page that is open, so with only a phone online an AI staff member's jobs sit quietly in the <a href="./07-office.html">delivery queue</a>.</li></ul>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>A phone is a remote, not a second machine</span></div><div class="callout-body"><p>Files, Git, terminals and the ledger live on the host; put the host to sleep and nobody is working on the other end of that link.</p></div></div>
+<h2 id="how-you-get-the-phone-screen"><a class="anchor" href="#how-you-get-the-phone-screen" aria-hidden="true">#</a>How you get the phone screen</h2>
+<p>Open the address with its auth code on a phone and the page routes itself to the touch layout, keeping the code in the URL. Add <code>slate_mobile=0</code> to stay on the desktop layout.</p>
+<h2 id="where-the-switch-lives"><a class="anchor" href="#where-the-switch-lives" aria-hidden="true">#</a>Where the switch lives</h2>
+<p><strong>Settings → LAN remote control → enable</strong>, and that is the only place.</p>
+<ul><li>The preference lives in <code>data/desktop_state.json</code>. A missing file, a broken read or a missing key all mean <strong>on</strong> — defaulting to off would leave existing installs suddenly unreachable.</li><li>Turning it off <strong>really releases the listening port</strong>; it doesn't just hide the address.</li><li>The switch is <strong>host-only</strong>. Flipping it from a device on the remote port is refused: that device is working through the very connection it would cut.</li></ul>
+<h2 id="how-to-get-the-address"><a class="anchor" href="#how-to-get-the-address" aria-hidden="true">#</a>How to get the address</h2>
+<p>The settings block on the host lists the address with its auth code — copy it or scan the QR code. It is built from this machine's LAN IP and the port the side service <strong>actually got</strong>: it prefers one port and walks upward when that is taken, so don't hard-code the number anywhere else.</p>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>Re-copy the address after a restart</span></div><div class="callout-body"><p>The master auth code is generated fresh for every process, so a restart invalidates old links; a phone stuck on "authorization required" just needs a freshly copied address.</p></div></div>
+<h2 id="headless-mode"><a class="anchor" href="#headless-mode" aria-hidden="true">#</a>Headless mode</h2>
+<div class="code-block"><div class="code-head"><span class="code-lang">text</span><button class="code-copy" type="button" data-copy data-copied="Copied">Copy</button></div><pre><code class="language-text">python desktop.py --remote</code></pre></div>
+<p>For machines with no desktop environment (a server, a Raspberry Pi, a container): no window, no tray — just the backend plus LAN remote control, with the local address and the authorized remote address printed to the terminal; Ctrl+C shuts it down. It forces remote control on <strong>for this process</strong> without writing the preference, and refuses to reuse a backend someone else started, because headless leaves no window to fix things with. A failed backend reports itself in the terminal.</p>
+<h2 id="why-only-the-face-changes"><a class="anchor" href="#why-only-the-face-changes" aria-hidden="true">#</a>Why only the face changes</h2>
+<p>The tool loop, message assembly, approval decisions and rendering logic all sit in the shared service modules; the phone injects only its own view and input. One engine behind two faces, so you never get "it looked doable on the phone but ran something else". The trade-off is honest too: debate and office interaction doesn't fit a touchscreen, so it isn't ported.</p>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<ul><li>Tickets and the narrowed scope behind them: <a href="./06-team.html">Team · the debate hall</a>.</li><li>Why work waits for an open page: <a href="./07-office.html">Office</a>.</li><li>Switches a backup doesn't carry: <a href="./12-projects-data.html">Projects, backups and the ledger</a>.</li></ul></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./12-projects-data.html"><span class="dir">Previous</span><span class="ttl">Projects, backups and the ledger</span></a><a class="next" href="./14-settings.html"><span class="dir">Next</span><span class="ttl">Settings</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#what-the-phone-has">What the phone has</a></li><li class="lv2"><a href="#what-the-phone-doesnt-have">What the phone doesn&#x27;t have</a></li><li class="lv2"><a href="#how-you-get-the-phone-screen">How you get the phone screen</a></li><li class="lv2"><a href="#where-the-switch-lives">Where the switch lives</a></li><li class="lv2"><a href="#how-to-get-the-address">How to get the address</a></li><li class="lv2"><a href="#headless-mode">Headless mode</a></li><li class="lv2"><a href="#why-only-the-face-changes">Why only the face changes</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

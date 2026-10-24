@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>办公室 · 门禁与账 · SLATE Teams 文档</title>
+<meta name="description" content="审校门禁、每日 token 预算、期限过期升级，以及站会与绩效两张卡从哪算出来">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+<link rel="alternate" hreflang="en" href="../09-office-gates.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="../assets/docs.css">
+</head>
+<body data-page="09-office-gates" data-lang="zh" data-root="../" data-search-empty="没找到匹配的页面" data-search-docs="文档">
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="打开导航" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="../index.html">
+      <span class="brand-mark"><img src="../assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">文档</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>搜索文档</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a>
+      <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="../09-office-gates.html" hreflang="en" title="阅读英文版">English</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="文档导航">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">开始</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">认识 SLATE Teams</a></li><li><a class="nav-link" href="./02-install.html">安装与启动</a></li><li><a class="nav-link" href="./03-interface.html">界面与页签</a></li></ul></div><div class="nav-group"><div class="nav-group-title">日常</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">模型与用量</a></li><li><a class="nav-link" href="./05-chat-approval.html">对话与审批</a></li></ul></div><div class="nav-group"><div class="nav-group-title">协作</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">团队 · 议事厅</a></li></ul></div><div class="nav-group"><div class="nav-group-title">办公室</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">办公室 · 招人、排班、交付</a></li><li><a class="nav-link" href="./08-office-work.html">办公室 · 像人一样工作</a></li><li><a class="nav-link active" href="./09-office-gates.html">办公室 · 门禁与账</a></li></ul></div><div class="nav-group"><div class="nav-group-title">能力</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">黑板与工作流</a></li><li><a class="nav-link" href="./11-extensions.html">扩展</a></li></ul></div><div class="nav-group"><div class="nav-group-title">数据与设置</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">项目、备份与账本</a></li><li><a class="nav-link" href="./13-mobile.html">手机遥控</a></li><li><a class="nav-link" href="./14-settings.html">设置</a></li><li><a class="nav-link" href="./15-faq.html">常见问题</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="面包屑"><a href="../index.html">文档</a><span class="sep">/</span><span>办公室</span><span class="sep">/</span><span class="current">办公室 · 门禁与账</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">办公室 · 门禁与账</h1>
+<p>放权给 AI 员工，要有几道闸：交付不能直接冲到你面前、钱要花得住、过期不能烂在桌上。 这四件事都在办公室这一层，且<strong>全部从同一张队列表算出来</strong>，没有另记一份账。</p>
+<h2 id="审校门禁"><a class="anchor" href="#审校门禁" aria-hidden="true">#</a>审校门禁</h2>
+<p>招人的时候给一位员工选「审校人」，他的交付就先递给那位审校人，<strong>不直接给你</strong>。</p>
+<ul><li>审校本身是<strong>一条排在审校人名下的活</strong>：它不该排在普通值班活后面，所以排得靠前一点， 但分诊抬了优先级的活仍然先走；期限默认两小时。</li><li>审校人用「判这一份交付」收口，只有两种判定：<strong>approve</strong>（合格，这份交付第一次递到你手上） 或 <strong>return</strong>（不合格，退回经办人重做，必须写要他改哪里）。</li><li>审校人必须是名册里的人，<strong>不能审自己</strong>，也不能审一个已经不在名册的人。</li></ul>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>你看到的措辞不一样</span></div><div class="callout-body"><p>没通过审校前，你只会看到「员工已交审校」；通过之后才是「员工交付」。 被退回时那一行写「审校退回：为什么」。这一条区分是刻意的——<strong>没过审的东西不该长得像交付</strong>。</p></div></div>
+<p>退回的重做走的是<a href="./08-office-work.html">递话</a>那条通道，所以一样数在「第 N 手」里，到 6 手止损。</p>
+<h2 id="每日预算"><a class="anchor" href="#每日预算" aria-hidden="true">#</a>每日预算</h2>
+<p>每位员工可以填一个<strong>每日预算</strong>（token）。今天花满之后：</p>
+<ul><li>值班表<strong>排不出新活</strong>，那条活会变成<strong>受阻</strong>，行上写着为什么；</li><li>晨会分诊和你手动交办的活<strong>照样能排</strong>——否则预算一满，你连"让他把手上最后一件做完"都做不到。</li></ul>
+<p>绩效那一栏会写「{今天用的} / 上限 {预算}」，满了标一枚<strong>预算已满</strong>。</p>
+<h2 id="期限过期会升级到人"><a class="anchor" href="#期限过期会升级到人" aria-hidden="true">#</a>期限过期会升级到人</h2>
+<p>分诊时给一条活填了要赶的时间点，过期后<strong>由时钟替人喊一句</strong>：议事流里出现一条系统提醒， 这条活进「等你拍板」。同一句提醒只喊一次，不会每刷新一次就催一遍； 一次最多升级几条，攒多了会把动态栏灌满——灌满等于没提醒。</p>
+<h2 id="两张卡"><a class="anchor" href="#两张卡" aria-hidden="true">#</a>两张卡</h2>
+<p><strong>今日站会</strong> —— 每个勾了「晨会分诊」的值班跑完，会在这一栏留一句自报：谁、说了什么、什么时候。 没人自报时它直接说"给谁排一条勾了晨会分诊的值班"，不放一张空表糊你。</p>
+<p><strong>绩效</strong> —— 一人一行：办成几件、没跑成几件、待人几件、待审校几件、被退回几件、 一趟平均多久、今天用了多少 token。</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>平均耗时的口径</span></div><div class="callout-body"><p>那一栏量的是<strong>从被领走到收口</strong>那一段，不是端到端墙钟——活排队等多久不算在里面。 它给的是量级，不是凭证。</p></div></div>
+<h2 id="下一步"><a class="anchor" href="#下一步" aria-hidden="true">#</a>下一步</h2>
+<p>这些活、话、判定怎么进备份：<a href="./12-projects-data.html">项目与数据</a>。</p></article>
+      <nav class="pager" aria-label="翻页"><a class="prev" href="./08-office-work.html"><span class="dir">上一篇</span><span class="ttl">办公室 · 像人一样工作</span></a><a class="next" href="./10-board.html"><span class="dir">下一篇</span><span class="ttl">黑板与工作流</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams（席）· 一桌人带着 AI 一起干活</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a> ·
+          <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · 文档随产品演进</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="本页目录"><div class="toc-title">本页目录</div><ul class="toc-list"><li class="lv2"><a href="#审校门禁">审校门禁</a></li><li class="lv2"><a href="#每日预算">每日预算</a></li><li class="lv2"><a href="#期限过期会升级到人">期限过期会升级到人</a></li><li class="lv2"><a href="#两张卡">两张卡</a></li><li class="lv2"><a href="#下一步">下一步</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文档">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="输入关键词，回车看结果" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
+  </div>
+</div>
+
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>

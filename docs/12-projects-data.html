@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects, backups and the ledger · SLATE Teams Docs</title>
+<meta name="description" content="What a workspace and its &quot;current root&quot; really mean, which tables a backup carries, and how restore and the two kinds of clearing differ">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/12-projects-data.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="12-projects-data" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/12-projects-data.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link active" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Data &amp; settings</span><span class="sep">/</span><span class="current">Projects, backups and the ledger</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Projects, backups and the ledger</h1>
+<p>Teams keeps its things in three layers: <strong>the view</strong> (which project you're looking at), <strong>the records</strong> (tables in the chat database) and <strong>the configuration</strong> (files under <code>data/</code>, plus the <code>.slate/</code> inside your project). One backup moves only part of the first two.</p>
+<h2 id="projects-and-workspaces"><a class="anchor" href="#projects-and-workspaces" aria-hidden="true">#</a>Projects and workspaces</h2>
+<ul><li>A <strong>single-folder project</strong> is just that folder. A <strong>workspace</strong> is a host folder holding the configuration, whose members are several unrelated folders. The host lands at <code>data/workspaces/&lt;name&gt;</code>, its configuration is <code>&lt;host&gt;/.slate/config.json</code>, holding three things: what it is, the member list, the current root.</li><li>There is <strong>one current root at a time</strong>. Switching it changes that one value; files, Git and the terminal working directory follow. Where configuration gets read and written is tracked separately, so a workspace's settings never land in a member's own <code>.slate/</code>.</li><li>Everything registered stays in <code>data/projects.json</code>, and <strong>the one you're looking at</strong> is still unique. Identity comes from the absolute path of the host folder — move it and the identity changes, which is why each entry carries aliases to re-file old conversations by hand.</li><li>Conversations attach to a project <strong>id</strong>, not a name. SLATE's own per-project data goes to <code>data/projects/&lt;id&gt;/</code>, never into your repo.</li></ul>
+<h2 id="what-a-backup-actually-carries"><a class="anchor" href="#what-a-backup-actually-carries" aria-hidden="true">#</a>What a backup actually carries</h2>
+<p>An export is one JSON file with a version number and three parts: the backend tables, your browser's local blob, and the team history list.</p>
+<div class="table-wrap"><table><thead><tr><th>Group</th><th>Tables</th><th>Inside</th></tr></thead><tbody><tr><td>Chat</td><td>conversations, messages</td><td>sessions and messages, archived ones included</td></tr><tr><td>Memory</td><td>memories, prompt_snippets</td><td>long-term memory, prompt material</td></tr><tr><td>Four debate tables</td><td>team_sessions, team_turns, team_attendees, team_inbox</td><td>each debate's header and seat snapshot, full speech text, tickets (sha256 only), turns waiting to be collected</td></tr><tr><td>Two ledger tables</td><td>runs, tool_events</td><td>the accounts per pass and every tool call; the star map and "which files changed" count from here</td></tr><tr><td>Two office tables</td><td>office_jobs, office_messages</td><td>the delivery queue and desk messages</td></tr><tr><td>Daily accounts</td><td>daily_usage</td><td>tokens per day; without it sessions restore fine and the activity heatmap stays blank</td></tr><tr><td>Three roster tables</td><td>employees, employee_duties, employee_notes</td><td>AI staff, duty schedules, their own notes</td></tr></tbody></table></div>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>Everything from the debate tables down is what Teams adds over upstream</span></div><div class="callout-body"><p>A missing table always shows up the same way: <strong>the backup looks complete, and that block is empty after the restore</strong>. So every new table declares itself — record or configuration.</p></div></div>
+<h2 id="two-ordering-traps-when-restoring"><a class="anchor" href="#two-ordering-traps-when-restoring" aria-hidden="true">#</a>Two ordering traps when restoring</h2>
+<ul><li><strong>Create the tables first, then merge.</strong> The debate, ledger and office tables are built lazily by whichever endpoint touches them first, so on a clean machine that never opened the team tab and never hired anyone they don't exist at all. Skip that and they all read as "no data": the count comes back 0 while the screen still says "done".</li><li><strong>Merge only what's new.</strong> Rows go in by primary or natural key; an existing row is skipped, never overwritten. The speech and tool-event tables drop their row numbers first — the same utterance is the same (session, sequence) pair on both machines, and reusing the id would collide with a locally written row and get silently swallowed.</li><li>The page reloads once after an import: the local half only takes effect on reload.</li></ul>
+<h2 id="the-two-clear-actions-are-not-the-same"><a class="anchor" href="#the-two-clear-actions-are-not-the-same" aria-hidden="true">#</a>The two "clear" actions are not the same</h2>
+<div class="table-wrap"><table><thead><tr><th>Where you click</th><th>What goes</th><th>What stays</th></tr></thead><tbody><tr><td>Task list, "clear all sessions"</td><td>Sessions and messages</td><td>The debate text and delivery history, with only their references to these sessions blanked out</td></tr><tr><td>Settings, storage, "clear conversations"</td><td>Messages, sessions, the four debate tables, the two ledger tables, the two office tables, the daily accounts — then the database is compacted</td><td>Employees, duty schedules and their notes; memory and prompt material; the knowledge base</td></tr></tbody></table></div>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>The second one takes the debate and the deliveries with it</span></div><div class="callout-body"><p>The confirmation has to say that in full. The roster and the schedules are <strong>configuration</strong>, not history: nobody says "clear conversations" meaning "fire my staff and cancel their shifts".</p></div></div>
+<h2 id="what-stays-out-of-the-json-on-purpose"><a class="anchor" href="#what-stays-out-of-the-json-on-purpose" aria-hidden="true">#</a>What stays out of the JSON on purpose</h2>
+<p>Configuration and binaries under <code>data/</code> aren't backed up: <code>desktop_state.json</code>, <code>mcp_servers.json</code> (MCP endpoints and secrets), <code>scheduled_tasks.json</code>, <code>skills/</code>, <code>experts/</code>, <code>actions/</code>, <code>constitution.json</code>, <code>knowledge.db</code>, <code>data/theme/</code> (background images, imported fonts), the registry and its hosts. A project's own <code>.slate/</code> travels with the code instead.</p>
+<div class="callout callout-danger"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 6.4v4.2M10 13.4v.2"/></svg><span>The backup file is plaintext</span></div><div class="callout-body"><p>The local half carries the model keys you typed in. Don't commit it, don't share it carelessly.</p></div></div>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<ul><li>Keep working from another machine: <a href="./13-mobile.html">Phone remote control</a>.</li><li>Where the switches a backup doesn't carry live: <a href="./14-settings.html">Settings</a>.</li><li>When something went wrong anyway: <a href="./15-faq.html">FAQ</a>.</li></ul></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./11-extensions.html"><span class="dir">Previous</span><span class="ttl">Extensions</span></a><a class="next" href="./13-mobile.html"><span class="dir">Next</span><span class="ttl">Phone remote control</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#projects-and-workspaces">Projects and workspaces</a></li><li class="lv2"><a href="#what-a-backup-actually-carries">What a backup actually carries</a></li><li class="lv2"><a href="#two-ordering-traps-when-restoring">Two ordering traps when restoring</a></li><li class="lv2"><a href="#the-two-clear-actions-are-not-the-same">The two &quot;clear&quot; actions are not the same</a></li><li class="lv2"><a href="#what-stays-out-of-the-json-on-purpose">What stays out of the JSON on purpose</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

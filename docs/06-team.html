@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team · the debate hall · SLATE Teams Docs</title>
+<meta name="description" content="How a multi-seat debate runs: people, tickets, rounds, waiting for your signature, workflows and the record">
+<link rel="icon" type="image/png" href="./assets/icon.png">
+<link rel="alternate" hreflang="zh-CN" href="./zh/06-team.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="./assets/docs.css">
+</head>
+<body data-page="06-team" data-lang="en" data-root="./" data-search-empty="No matching page" data-search-docs="Docs">
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="Open navigation" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="./index.html">
+      <span class="brand-mark"><img src="./assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">Docs</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>Search docs</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a>
+      <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="./zh/06-team.html" hreflang="zh-CN" title="Read in Chinese">中文</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Toggle theme">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="Documentation navigation">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">Start</div><ul class="nav-list"><li><a class="nav-link" href="./01-what-is-teams.html">What SLATE Teams is</a></li><li><a class="nav-link" href="./02-install.html">Install &amp; launch</a></li><li><a class="nav-link" href="./03-interface.html">Interface &amp; tabs</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Daily</div><ul class="nav-list"><li><a class="nav-link" href="./04-models.html">Models &amp; usage</a></li><li><a class="nav-link" href="./05-chat-approval.html">Chat &amp; approvals</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Collaborate</div><ul class="nav-list"><li><a class="nav-link active" href="./06-team.html">Team · the debate hall</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Office</div><ul class="nav-list"><li><a class="nav-link" href="./07-office.html">Office · hiring, rosters, deliveries</a></li><li><a class="nav-link" href="./08-office-work.html">Office · working like a person</a></li><li><a class="nav-link" href="./09-office-gates.html">Office · gates &amp; accounts</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Capabilities</div><ul class="nav-list"><li><a class="nav-link" href="./10-board.html">The board and workflows</a></li><li><a class="nav-link" href="./11-extensions.html">Extensions</a></li></ul></div><div class="nav-group"><div class="nav-group-title">Data &amp; settings</div><ul class="nav-list"><li><a class="nav-link" href="./12-projects-data.html">Projects, backups and the ledger</a></li><li><a class="nav-link" href="./13-mobile.html">Phone remote control</a></li><li><a class="nav-link" href="./14-settings.html">Settings</a></li><li><a class="nav-link" href="./15-faq.html">FAQ</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumbs"><a href="./index.html">Docs</a><span class="sep">/</span><span>Collaborate</span><span class="sep">/</span><span class="current">Team · the debate hall</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">Team · the debate hall</h1>
+<p>The <strong>Team</strong> tab is a table: several people and several AI seats in one discussion, a host advancing the rounds, and a conclusion that <strong>a human signs</strong>. Three columns side by side — seats present on the left, the feed in the middle, what needs you on the right.</p>
+<h2 id="seats"><a class="anchor" href="#seats" aria-hidden="true">#</a>Seats</h2>
+<ul><li><strong>AI seats</strong> — picked from your models; the host decides who speaks first and for how many rounds.</li><li><strong>Human seats</strong> — press "添加真人席位" (add a human seat) to issue a <strong>ticket</strong>, then send the join link. The other person opens it in their own browser and sees <strong>this discussion only</strong> — nothing else on your machine.</li></ul>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>A ticket is a scope, not a password</span></div><div class="callout-body"><p>The ticket decides which discussion a person may enter. When it expires or is revoked, their page says so plainly ("票据已失效，请让主持人重新发一张" — the ticket is no longer valid, ask the host for a new one) instead of hanging on a spinner.</p></div></div>
+<p>Seat state is visible in the left column: <strong>online</strong>, <strong>away</strong>, <strong>not joined</strong>, <strong>timed out without speaking</strong>. You never have to guess who is missing.</p>
+<h2 id="how-one-discussion-runs"><a class="anchor" href="#how-one-discussion-runs" aria-hidden="true">#</a>How one discussion runs</h2>
+<ol><li>The host opens it; the first round starts speaking, and the feed gets a rule <code>—— 第 1 轮 ——</code> ("round 1").</li><li>Each round, seats speak in turn; anyone can reply to a named seat ("回应 {name}").</li><li>In the final round the heading is <strong>最终决策</strong> (final decision) — that entry is not a conclusion, it is a proposal <strong>waiting for your signature</strong>.</li><li>The stop point reads "等待你拍板" (waiting for your call) and offers two buttons: <strong>采纳拍板</strong> (adopt it) or <strong>继续讨论</strong> (keep discussing). Adopting records "已采纳这个决策" (this decision was adopted) and stores who signed it.</li></ol>
+<p>A human seat has two settings: <strong>permission</strong> (may they speak, may they call it) and <strong>what to do when they don't show</strong> (let AI write for them / skip and leave a trace / keep waiting, with a timeout in seconds). The invite link is issued from the same panel.</p>
+<p>The participant side uses different words: when it's their turn the page says "现在轮到你发言" (it's your turn to speak), typing early tells them "发言会在轮到你时被采纳" (your message will be picked up on your turn), and otherwise it shows "等 {name} 发言…" (waiting for {name}). Their positions are: 提案 (propose), 支持 (support), 反对 (oppose), 反驳 (rebut), 补充 (add to), 决策 (decide).</p>
+<div class="callout callout-warning"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3.4 17.4 16.6H2.6Z"/><path d="M10 8.2v3.4M10 14v.1"/></svg><span>Decisions don't adopt themselves</span></div><div class="callout-body"><p>Only the entry you signed counts as the conclusion. In night mode (full autopilot) the system adopts for you, and the feed states it explicitly: "夜间模式：决策已自动采纳". That is the exception, not the default.</p></div></div>
+<h2 id="board-workflows"><a class="anchor" href="#board-workflows" aria-hidden="true">#</a>Board workflows</h2>
+<p>The Team tab can also run a workflow drawn on the board: nodes execute one by one with progress written as <code>{ok}/{n} 节点成功</code> (nodes succeeded), and a failure stops there to say which node broke — it never passes a half-run off as success.</p>
+<h2 id="every-line-is-kept"><a class="anchor" href="#every-line-is-kept" aria-hidden="true">#</a>Every line is kept</h2>
+<p>Speech, rounds, signatures and tool calls are stored locally and travel with your backups (the four debate tables are listed in <a href="./12-projects-data.html">Projects &amp; data</a>). Moving machines, restoring history, or clearing one discussion alone all follow the two different rules in that chapter.</p>
+<h2 id="next"><a class="anchor" href="#next" aria-hidden="true">#</a>Next</h2>
+<ul><li>To have work finished while you are away: <a href="./07-office.html">Office</a>.</li><li>To see the tool calls behind each message: <a href="./05-chat-approval.html">Chat &amp; approval</a>.</li></ul></article>
+      <nav class="pager" aria-label="Pagination"><a class="prev" href="./05-chat-approval.html"><span class="dir">Previous</span><span class="ttl">Chat &amp; approvals</span></a><a class="next" href="./07-office.html"><span class="dir">Next</span><span class="ttl">Office · hiring, rosters, deliveries</span></a></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams · a shared desk for you and your AI</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">Home site</a> ·
+          <a href="https://teams.slate-ai.site/guide.html" target="_blank" rel="noopener">Quick start</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · docs evolve with the product</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="On this page"><div class="toc-title">On this page</div><ul class="toc-list"><li class="lv2"><a href="#seats">Seats</a></li><li class="lv2"><a href="#how-one-discussion-runs">How one discussion runs</a></li><li class="lv2"><a href="#board-workflows">Board workflows</a></li><li class="lv2"><a href="#every-line-is-kept">Every line is kept</a></li><li class="lv2"><a href="#next">Next</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search docs">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="Type a keyword, press Enter" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ move</span><span>Enter open</span><span>Esc close</span></div>
+  </div>
+</div>
+
+<script src="./assets/search-index.js"></script>
+<script src="./assets/docs.js"></script>
+</body>
+</html>

@@ -33,7 +33,8 @@ shift, you check it when you're back.
 - **Team** — the debate hall. Seats, the feed, and "waiting for your signature" in three columns.
 - **Office** — AI staff roster, duty schedule, hand-offs between desks, the delivery queue.
 - **Board** — spread a discussion into a reasoning chain and workflow nodes.
-- **Extensions** — skills, MCP servers, built-in tools, reply modes, experts: capabilities live here.
+- **Extensions** — seven columns: skills, tools, reply modes, evolved tools, MCP, expert packs,
+  Actions. What the model is allowed to use is decided here.
 - **Settings** — models, theme, language, data & privacy, and each token-spending AI feature.
 
 ## How it relates to SLATE
