@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>认识 SLATE Teams · SLATE Teams 文档</title>
+<meta name="description" content="SLATE Teams（席）是什么：一桌人带着 AI 一起干活，议事厅、办公室与账本各管什么">
+<link rel="icon" type="image/png" href="../assets/icon.png">
+<link rel="alternate" hreflang="en" href="../01-what-is-teams.html">
+<script>
+  try {
+    var saved = localStorage.getItem('slate-teams-docs-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+</script>
+<link rel="stylesheet" href="../assets/docs.css">
+</head>
+<body data-page="01-what-is-teams" data-lang="zh" data-root="../" data-search-empty="没找到匹配的页面" data-search-docs="文档">
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="icon-btn menu-btn" type="button" data-menu aria-label="打开导航" aria-expanded="false">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
+    </button>
+
+    <a class="brand" href="../index.html">
+      <span class="brand-mark"><img src="../assets/icon.png" alt=""></span>
+      <span class="brand-name">SLATE Teams</span>
+      <span class="brand-sub">文档</span>
+    </a>
+
+    <button class="search-trigger" type="button" data-search-open>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <span>搜索文档</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <nav class="topbar-links">
+      <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a>
+      <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a>
+      <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+
+    <a class="lang-switch" href="../01-what-is-teams.html" hreflang="en" title="阅读英文版">English</a>
+
+    <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="切换明暗主题">
+      <svg class="ico-moon" viewBox="0 0 20 20" aria-hidden="true"><path d="M16 12.3A6.6 6.6 0 0 1 7.7 4a6.8 6.8 0 1 0 8.3 8.3Z"/></svg>
+      <svg class="ico-sun" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6"/><path d="M10 2v2.2M10 15.8V18M2 10h2.2M15.8 10H18M4.3 4.3l1.6 1.6M14.1 14.1l1.6 1.6M15.7 4.3l-1.6 1.6M5.9 14.1l-1.6 1.6"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="shell">
+  <div class="scrim" data-scrim hidden></div>
+
+  <aside class="sidebar" data-sidebar aria-label="文档导航">
+    <nav class="sidebar-nav"><div class="nav-group"><div class="nav-group-title">开始</div><ul class="nav-list"><li><a class="nav-link active" href="./01-what-is-teams.html">认识 SLATE Teams</a></li></ul></div></nav>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="main-inner">
+      <nav class="breadcrumbs" aria-label="面包屑"><a href="../index.html">文档</a><span class="sep">/</span><span>开始</span><span class="sep">/</span><span class="current">认识 SLATE Teams</span></nav>
+      <article class="prose"><h1 class="doc-title" id="top">认识 SLATE Teams</h1>
+<p>SLATE Teams 跑在<strong>你自己的机器上</strong>：不需要服务器，不上传对话，模型密钥只存在本机。 它把一件事变得顺手——让几个人和一批 AI 在同一个桌面上协同，并且每一笔都留得下痕迹。</p>
+<p>产品名里的「席」是双关：一张桌子上的座位，也是入席的那件事。界面走「席 · Ledger」这套视觉身份—— 石墨纸面、红墨批注、直角、账簿式的发丝分隔线。</p>
+<h2 id="三件核心的事"><a class="anchor" href="#三件核心的事" aria-hidden="true">#</a>三件核心的事</h2>
+<div class="table-wrap"><table><thead><tr><th>位置</th><th>它管什么</th><th>去这几章</th></tr></thead><tbody><tr><td>议事厅</td><td>真人席位与 AI 席位同开一场讨论，主持人推进轮次，结论要人拍板</td><td><a href="./06-team.html">团队</a></td></tr><tr><td>办公室</td><td>AI 员工按值班表自己找活干，交付要过审校，账算在每个人头上</td><td><a href="./07-office.html">办公室</a></td></tr><tr><td>账本</td><td>谁说的、谁批的、花了多少 token，全部落库可查可备份</td><td><a href="./12-projects-data.html">项目与数据</a></td></tr></tbody></table></div>
+<div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>一句话区分</span></div><div class="callout-body"><p>议事厅是<strong>同一时刻</strong>的协同——大家在一场讨论里；办公室是<strong>不同时刻</strong>的协同—— 你把活留下，AI 员工在它值班时做完，你回来验收。</p></div></div>
+<h2 id="六个顶层页签"><a class="anchor" href="#六个顶层页签" aria-hidden="true">#</a>六个顶层页签</h2>
+<ul><li><strong>对话</strong> —— 常规的一对一会话，工具调用、审批、上下文预算都在这里。</li><li><strong>团队</strong> —— 议事厅。席位栏、议事流、待你签字三栏并排。</li><li><strong>办公室</strong> —— AI 员工名册、值班表、工位递话、交付队列。</li><li><strong>黑板</strong> —— 把讨论摊成逻辑链与工作流节点，看图推进。</li><li><strong>扩展</strong> —— 技能、MCP 服务、内置工具、回复模式、专家，能力都在这里开关。</li><li><strong>设置</strong> —— 模型、主题、语言、数据与隐私、AI 辅助功能逐项开关。</li></ul>
+<h2 id="与-slate-的关系"><a class="anchor" href="#与-slate-的关系" aria-hidden="true">#</a>与 SLATE 的关系</h2>
+<p>SLATE Teams 是 <a href="https://slate-ai.site/" target="_blank" rel="noopener">SLATE</a> 的同源分支，共用底座（对话、工具、技能、黑板、数据层）， 差别在<strong>协作层</strong>：多人席位、票据与作用域收窄、AI 员工与值班表。</p>
+<p>两者可以在同一台机器上并存：端口、数据目录、安装器身份与更新源都是分开的， 互相不覆盖，也不共用一份配置。</p>
+<div class="callout callout-tip"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 13.4V9M10 6.6v.6"/><path d="M7.6 12.4h4.8"/></svg><span>先装哪个</span></div><div class="callout-body"><p>只你一个人用，SLATE 更轻；要拉人一起讨论、或者想让 AI 按班次自己干活，用 SLATE Teams。</p></div></div>
+<h2 id="数据在哪"><a class="anchor" href="#数据在哪" aria-hidden="true">#</a>数据在哪</h2>
+<p>所有会话、席位、活与话、账本都在安装目录的 <code>data/</code> 下，是本地 SQLite 文件。 不联网就不产生任何请求；联网只发生在你调用模型 API 与拉取更新时。</p>
+<p>怎么备份、怎么清、哪两种「清空」不是一回事，写在 <a href="./12-projects-data.html">项目与数据</a>。</p>
+<h2 id="下一步"><a class="anchor" href="#下一步" aria-hidden="true">#</a>下一步</h2>
+<ol><li><a href="./02-install.html">安装与启动</a> —— 装好、配一个模型、开第一桌。</li><li><a href="./03-interface.html">界面与页签</a> —— 六张页签各装什么，明暗两套主题。</li><li><a href="./07-office.html">办公室与 AI 员工</a> —— 这一版最不一样的地方。</li></ol></article>
+      <nav class="pager" aria-label="翻页"><span class="empty"></span><span class="empty"></span></nav>
+      <footer class="site-footer">
+        <span>SLATE Teams（席）· 一桌人带着 AI 一起干活</span>
+        <span>
+          <a href="https://teams.slate-ai.site/" target="_blank" rel="noopener">官网</a> ·
+          <a href="https://teams.slate-ai.site/guide.htmlindex.html" target="_blank" rel="noopener">快速上手</a> ·
+          <a href="https://github.com/CaryWang1234/SLATE-Teams" target="_blank" rel="noopener">GitHub</a>
+        </span>
+        <span>MIT License · 文档随产品演进</span>
+      </footer>
+    </div>
+  </main>
+
+  <aside class="toc" data-toc aria-label="本页目录"><div class="toc-title">本页目录</div><ul class="toc-list"><li class="lv2"><a href="#三件核心的事">三件核心的事</a></li><li class="lv2"><a href="#六个顶层页签">六个顶层页签</a></li><li class="lv2"><a href="#与-slate-的关系">与 SLATE 的关系</a></li><li class="lv2"><a href="#数据在哪">数据在哪</a></li><li class="lv2"><a href="#下一步">下一步</a></li></ul></aside>
+</div>
+
+<div class="search-overlay" data-search-overlay hidden>
+  <div class="search-panel" role="dialog" aria-modal="true" aria-label="搜索文档">
+    <div class="search-field">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="M13.2 13.2 17 17"/></svg>
+      <input type="search" placeholder="输入关键词，回车看结果" data-search-input autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" data-search-results></div>
+    <div class="search-hint"><span>↑ ↓ 选择</span><span>Enter 打开</span><span>Esc 关闭</span></div>
+  </div>
+</div>
+
+<script src="../assets/search-index.js"></script>
+<script src="../assets/docs.js"></script>
+</body>
+</html>
