@@ -44,9 +44,10 @@ Settings → 模型/上下文 (models & context): fill in one provider's API key
 and you're running. The key is written only into the local `data/desktop_state.json`; it never
 appears in an outbound request and never enters a backup.
 
-:::warning Your keys are not in the backup
-Exports contain no model keys and no local preferences. After restoring on another machine you fill
-the keys in again — deliberately.
+:::danger Your keys are inside the backup
+The export packs in the whole local state, **including model API keys in plaintext**. A backup file is
+therefore a ring of keys: don't upload it to a drive, don't paste it into an issue, don't send it to
+anyone. To share a problem, send a screenshot and the log — nothing else.
 :::
 
 ## Coexisting with SLATE
