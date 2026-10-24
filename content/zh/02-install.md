@@ -12,7 +12,7 @@ order: 2
 下载 `SLATE-Teams-Setup-<版本>.exe`，双击装完从桌面图标启动。默认装到当前用户的
 `AppData\Local\Programs\SLATE Teams`，不需要管理员权限。
 
-装完第一次启动会打开一个本地窗口，界面就是 [六个页签](./03-interface.md)。
+装完第一次启动会打开一个本地窗口，界面就是 [五个页签](./03-interface.md)。
 
 ### macOS
 

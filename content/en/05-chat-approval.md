@@ -1,11 +1,14 @@
 ---
 title: Chat & approvals
-description: What the chat page can do, the four real approval modes and what each lets through, the exact meaning of Night Mode, where the high-risk lists live, how tool calls render
+description: What the Office chat view can do, the four real approval modes and what each lets through, the exact meaning of Night Mode, where the high-risk lists live, how tool calls render
 section: Daily
 order: 5
 ---
 
-## What the chat page does
+## What the Office chat view does
+
+Open Office in the top bar and you land here by default. The switch at the top right goes to **Desks** —
+the AI staff office. They are two sides of one page, not two separate tables.
 
 - **Sidebar**, three tabs: Project (folder and file tree), Tasks (past conversations — searchable, batch manageable,
   archivable), Summary.

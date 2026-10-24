@@ -5,7 +5,7 @@ section: Data & settings
 order: 14
 ---
 
-Settings is the sixth tab in the top bar. The left column is an anchor navigation with a search box above it; the right
+Settings is the fifth tab in the top bar. The left column is an anchor navigation with a search box above it; the right
 column holds the grouped blocks. **The navigation is read from the blocks at runtime**, so the group count follows the
 version while the order always matches the main area. There are **21 groups**: Models · API test · Usage · Context &
 project · Auto-advance · AI-assisted features · Notifications · Background tasks · Parallel runs & projects · Minimal UI

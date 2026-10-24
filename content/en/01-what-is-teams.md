@@ -27,11 +27,12 @@ is collaboration **at different moments** — you leave the work, an AI staff me
 shift, you check it when you're back.
 :::
 
-## Six top-level tabs
+## Five top-level tabs
 
-- **Chat** — the ordinary one-to-one conversation: tool calls, approvals, context budget.
+- **Office** — one side is **Chat** (the ordinary one-to-one conversation: tool calls, approvals,
+  context budget), the other is **Desks** (AI staff roster, duty schedule, hand-offs between desks,
+  the delivery queue). Switch between them at the top right.
 - **Team** — the debate hall. Seats, the feed, and "waiting for your signature" in three columns.
-- **Office** — AI staff roster, duty schedule, hand-offs between desks, the delivery queue.
 - **Board** — spread a discussion into a reasoning chain and workflow nodes.
 - **Extensions** — seven columns: skills, tools, reply modes, evolved tools, MCP, expert packs,
   Actions. What the model is allowed to use is decided here.
@@ -63,5 +64,5 @@ How to back it up — and why the two "clear" buttons are not the same thing —
 ## Next
 
 1. [Install & launch](./02-install.md) — set it up, add one model, open the first table.
-2. [Interface & tabs](./03-interface.md) — what each of the six tabs holds, light and dark.
+2. [Interface & tabs](./03-interface.md) — what each of the five tabs holds, light and dark.
 3. [Office & AI staff](./07-office.md) — the part that is genuinely different here.

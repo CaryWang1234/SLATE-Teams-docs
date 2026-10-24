@@ -5,9 +5,10 @@ section: Collaborate
 order: 6
 ---
 
-The **Team** tab is a table: several people and several AI seats in one discussion, a host
-advancing the rounds, and a conclusion that **a human signs**. Three columns side by side —
-seats present on the left, the feed in the middle, what needs you on the right.
+**Team** is the top-level tab next to **Office**, and it is a table: several people and several AI
+seats in one discussion, a host advancing the rounds, and a conclusion that **a human signs**.
+Three columns side by side — seats present on the left, the feed in the middle, what needs you on
+the right.
 
 ## Seats
 

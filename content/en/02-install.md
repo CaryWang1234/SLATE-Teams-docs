@@ -12,7 +12,7 @@ order: 2
 Download `SLATE-Teams-Setup-<version>.exe`, run it, and launch from the desktop icon. It installs
 into `AppData\Local\Programs\SLATE Teams` for the current user and needs no administrator rights.
 
-The first launch opens a local window — that's the [six tabs](./03-interface.md).
+The first launch opens a local window — that's the [five tabs](./03-interface.md).
 
 ### macOS
 

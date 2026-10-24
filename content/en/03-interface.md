@@ -1,28 +1,28 @@
 ---
 title: Interface & tabs
-description: What each of the six tabs holds, the three columns of the team page, light/dark plus the ten theme presets, language and the Prompt Factory entry
+description: What each of the five tabs holds, the Chat and Desks sides of Office, the three columns of the team page, light/dark plus the ten theme presets, language and the Prompt Factory entry
 section: Start
 order: 3
 ---
 
-One topbar over one workspace. Six tabs sit in the middle of the topbar; four buttons on the right:
+One topbar over one workspace. Five tabs sit in the middle of the topbar; four buttons on the right:
 **Keys**, **Remote**, **Theme**, **Settings**.
 
-## The six tabs
+## The five tabs
 
 | Tab | What it holds | Read |
 | --- | --- | --- |
-| Chat | The ordinary one-to-one conversation: sidebar, message feed, usage strip, input toolbar | [Chat & approvals](./05-chat-approval.md) |
+| Office | One page, two sides: **Chat** is the ordinary one-to-one conversation (sidebar, message feed, usage strip, input toolbar); **Desks** is the AI staff roster, the virtual office and the hand-off composer, with five tabs on the right: Activity / Waiting on you / Duties / Role / Standup & Record | [Chat & approvals](./05-chat-approval.md) · [Office](./07-office.md) |
 | Team | The debate hall: seats present, the feed, awaiting your signature | [Team](./06-team.md) |
-| Office | AI staff roster, the virtual office, the hand-off composer, and five tabs on the right: Activity / Waiting on you / Duties / Role / Standup & Record | [Office](./07-office.md) |
 | Whiteboard | Cards as a reasoning chain plus a freehand layer; five views: Git / Flow / Kanban / Outline / Workflow | [Whiteboard](./10-board.md) |
 | Extensions | The master switch for everything the model may use, in seven sections: skills (SKILL.md), tools, modes, new features, MCP servers, expert packs, Actions | [Extensions](./11-extensions.md) |
 | Settings | Models and keys, context and project, approval mode, theme, notifications, backup and storage, one block after another | [Settings](./14-settings.md) |
 
-:::note The chat sidebar is not a seventh tab
-"Project / Tasks / Summary" is a column **inside** the chat page; switching them never leaves the
-conversation. The right rail stacks the task list, background tasks and the Grind panel, each opening
-and closing on its own.
+:::note The two Office sides are not two tabs
+The Office tab has a **Chat / Desks** switch at its top right, and it opens on Chat.
+Inside Chat, "Project / Tasks / Summary" is a column **inside** the page; switching them never leaves
+the conversation. The right rail stacks the task list, background tasks and the Grind panel, each
+opening and closing on its own.
 :::
 
 ## The three columns of the team page

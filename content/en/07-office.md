@@ -9,6 +9,11 @@ The office is collaboration **at different moments**: you leave a piece of work,
 does it on their shift, you check it when you are back. It does not add a background service —
 **the open SLATE Teams page is what executes**.
 
+:::note Office has two sides
+The top-level **Office** tab opens on the **Chat** side; this chapter is about switching to **Desks**.
+The switch sits at the top right, and both sides stay on the same page.
+:::
+
 :::warning Close the app and nothing runs
 The backend only queues; it never executes work itself. So the office needs one machine with SLATE
 Teams open: that page is whoever is on duty. With the app closed, jobs sit quietly in the queue

@@ -79,12 +79,12 @@
 <p>预算同时喂给两处：<strong>上下文条算到哪儿算满</strong>、<strong>自动压缩在第几轮触发</strong>。两边是同一个数， 所以不会出现「看着没满就压缩了」。</p>
 <p>要单独调某个模型：模型配置里该行的「最大上下文」，滑杆粗选、旁边的数字框填精确值； 本地与自定义端点还能「探测窗口」，让程序去问端点自己报多大。预算与标称窗口不一致时， 用量条的悬浮层会把两个数都写出来。</p>
 <h2 id="用量条读法"><a class="anchor" href="#用量条读法" aria-hidden="true">#</a>用量条读法</h2>
-<p>对话页会话区上方那条，从左到右：</p>
+<p>对话面会话区上方那条，从左到右：</p>
 <div class="table-wrap"><table><thead><tr><th>段</th><th>它是什么</th></tr></thead><tbody><tr><td>模型名</td><td>当前模型；没配密钥时旁边亮一个警告标</td></tr><tr><td>消息</td><td>这一场的消息条数</td></tr><tr><td>输入</td><td>累计 prompt token</td></tr><tr><td>输出</td><td>累计 completion token</td></tr><tr><td>总计</td><td>两者之和</td></tr><tr><td>上下文</td><td>已占用 token 数 + 占预算的百分比进度条</td></tr></tbody></table></div>
 <p>「上下文」那一段可以点，点了直接跳到设置页这一档的预算滑杆。停在用量条上会展开<strong>上下文构成</strong>， 按五个桶分：系统提示词 / 工具目录 / Skill 注入 / 工具调用与结果 / 对话消息，各带占比。</p>
 <div class="callout callout-note"><div class="callout-head"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 9v4.6M10 6.6v.1"/></svg><span>数字是估算</span></div><div class="callout-body"><p>token 按约 3 字符 / token 估。可信的是占比与趋势，不是与上游账单逐位一致。</p></div></div>
 <h2 id="换模型与加厂商"><a class="anchor" href="#换模型与加厂商" aria-hidden="true">#</a>换模型与加厂商</h2>
-<ul><li><strong>换模型</strong>：对话页输入区工具行的模型下拉。它是全局的一档——切会话不会换模型， 但每场对话各自记着自己的用量。</li><li><strong>加厂商</strong>：设置 → 模型配置 → 「+ 添加模型」。请求模式三种：OpenAI 兼容（自动拼 <code>/chat/completions</code>）、 Anthropic（<code>/v1/messages</code> + <code>x-api-key</code>）、curl 直连（Base URL 填完整端点地址）；再填 Base URL、 API Key（可选）、Context Window。</li><li><strong>备份与恢复</strong>：设置 → 数据备份与恢复，按 id 合并导入，不覆盖已有数据。详见 <a href="./12-projects-data.html">项目与数据</a>。</li></ul></article>
+<ul><li><strong>换模型</strong>：对话面输入区工具行的模型下拉。它是全局的一档——切会话不会换模型， 但每场对话各自记着自己的用量。</li><li><strong>加厂商</strong>：设置 → 模型配置 → 「+ 添加模型」。请求模式三种：OpenAI 兼容（自动拼 <code>/chat/completions</code>）、 Anthropic（<code>/v1/messages</code> + <code>x-api-key</code>）、curl 直连（Base URL 填完整端点地址）；再填 Base URL、 API Key（可选）、Context Window。</li><li><strong>备份与恢复</strong>：设置 → 数据备份与恢复，按 id 合并导入，不覆盖已有数据。详见 <a href="./12-projects-data.html">项目与数据</a>。</li></ul></article>
       <nav class="pager" aria-label="翻页"><a class="prev" href="./03-interface.html"><span class="dir">上一篇</span><span class="ttl">界面与页签</span></a><a class="next" href="./05-chat-approval.html"><span class="dir">下一篇</span><span class="ttl">对话与审批</span></a></nav>
       <footer class="site-footer">
         <span>SLATE Teams（席）· 一桌人带着 AI 一起干活</span>
